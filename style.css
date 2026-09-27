@@ -182,13 +182,11 @@ h1 {
   border-bottom: 1px solid var(--line);
   padding: 24px 0 28px;
 }
-.project-image {
-  display: block;
+.project-image img {
   width: 100%;
-  aspect-ratio: 16 / 9;
-  display: grid;
-  place-items: center;
-  transition: opacity .3s ease;
+  height: 100%;
+  object-fit: cover; /* Esto hace que la imagen rellene el recuadro sin deformarse */
+  display: block;
 }
 .project-image:hover { opacity: .8; }
 .project-info {
