@@ -28,22 +28,24 @@
 
   <main>
 <section id="home" class="page page-home">
-  <div class="hero-carousel" aria-label="Featured work">
-    
+ <div class="hero-carousel" aria-label="Featured work">
     <!-- Slide con Video -->
     <div class="slide active">
-      <video autoplay muted loop playsinline class="video-portada">
-        <source src="assets/Mpeg-2-Covadongaalperi-Antes De Despues(1).mp4" type="video/mp4">
-        Tu navegador no soporta video.
-      </video>
+       <video autoplay muted loop playsinline class="video-portada">
+          <source src="assets/videoExpo.mp4" type="video/mp4">
+       </video>
     </div>
 
+    <!-- Otros Slides si los tienes -->
     <div class="slide">
-      <div class="image-placeholder">ADD IMAGE 02</div>
+       <div class="image-placeholder">Imagen 02</div>
     </div>
-    
-    <!-- ... resto de botones del carrusel ... -->
-  </div>
+
+    <!-- ESTO ES LO QUE FALTA Y HACE QUE EL SCRIPT DE ERROR: -->
+    <button class="carousel-arrow prev">←</button>
+    <button class="carousel-arrow next">→</button>
+    <div class="carousel-dots"></div> <!-- Esta línea es vital -->
+</div>
 </section>
 
     <section id="work" class="page page-work">
@@ -71,7 +73,7 @@
        <article class="project" data-category="branding">
   <a href="#" class="project-image">
     <!-- Cambiamos el span por la imagen -->
-    <img src="assets/imagen behance_Mesa de trabajo 1.png" alt="Copa de vino">
+    <img src="assets/portada%20behance_Mesa%20de%20trabajo%201.png" alt="Copa de vino">
   </a>
   <div class="project-info">
     <h2>Project Two</h2>
