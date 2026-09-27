@@ -1,34 +1,41 @@
-// Esperar a que cargue el contenido
-document.addEventListener('DOMContentLoaded', () => {
-  
-  // LOGICA DEL VOLUMEN
-  const video = document.getElementById('heroVideo');
-  const volumeBtn = document.getElementById('volumeToggle');
-  const volIcon = document.getElementById('volIcon');
+// Esperamos a que la ventana cargue totalmente
+window.onload = function() {
+    
+    const video = document.getElementById('heroVideo');
+    const volumeBtn = document.getElementById('volumeToggle');
+    const volIcon = document.getElementById('volIcon');
 
-  if (volumeBtn && video) {
-    volumeBtn.addEventListener('click', () => {
-      if (video.muted) {
-        video.muted = false;
-        volIcon.textContent = '🔊';
-      } else {
-        video.muted = true;
-        volIcon.textContent = '🔇';
-      }
+    // Comprobamos que los elementos existen para evitar errores
+    if (video && volumeBtn) {
+        volumeBtn.onclick = function() {
+            if (video.muted) {
+                video.muted = false;
+                volIcon.innerHTML = "🔊"; // Icono con sonido
+            } else {
+                video.muted = true;
+                volIcon.innerHTML = "🔇"; // Icono silencio
+            }
+        };
+    }
+
+    // Filtros de la sección "Work"
+    const filters = document.querySelectorAll(".filter");
+    filters.forEach(button => {
+        button.onclick = function() {
+            const category = this.getAttribute("data-filter");
+            
+            // Cambiar clase activa en botones
+            filters.forEach(btn => btn.classList.remove("active"));
+            this.classList.add("active");
+
+            // Filtrar proyectos
+            document.querySelectorAll(".project").forEach(project => {
+                if (category === "all" || project.getAttribute("data-category") === category) {
+                    project.style.display = "block";
+                } else {
+                    project.style.display = "none";
+                }
+            });
+        };
     });
-  }
-
-  // LOGICA DE FILTROS DE TRABAJO
-  document.querySelectorAll(".filter").forEach(button => {
-    button.addEventListener("click", () => {
-      const filter = button.dataset.filter;
-      document.querySelectorAll(".filter").forEach(b => b.classList.remove("active"));
-      button.classList.add("active");
-
-      document.querySelectorAll(".project").forEach(project => {
-        const visible = filter === "all" || project.dataset.category === filter;
-        project.classList.toggle("hidden", !visible);
-      });
-    });
-  });
-});
+};
