@@ -30,16 +30,17 @@
     <section id="home" class="page page-home">
       <div class="hero-carousel" aria-label="Featured work">
         <!-- Slide con Video -->
-        <div class="slide active">
-           <video id="heroVideo" autoplay muted loop playsinline class="video-portada">
-              <source src="assets/Comp 1.mp4" type="video/mp4">
-           </video>
-           
-           <!-- NUEVO: Botón de Volumen -->
-           <button id="volumeToggle" class="volume-btn" aria-label="Toggle Volume">
-             <span id="volIcon">🔇</span>
-           </button>
-        </div>
+<div class="slide active">
+   <!-- Le ponemos id="heroVideo" -->
+   <video id="heroVideo" autoplay muted loop playsinline class="video-portada">
+      <source src="assets/Comp 1.mp4" type="video/mp4">
+   </video>
+   
+   <!-- Botón mucho más simple -->
+   <button id="volumeToggle" class="volume-btn">
+     <span id="volIcon">🔇</span>
+   </button>
+</div>
 
         <!-- Si solo vas a tener el video, puedes borrar este slide de abajo también -->
         <div class="slide">
