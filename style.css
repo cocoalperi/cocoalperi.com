@@ -207,26 +207,7 @@ h1 {
   padding-top: 12px;
 }
 
-/* Botón de volumen */
-/* Botón de volumen ultra minimalista */
-.volume-btn {
-  position: absolute;
-  bottom: 30px;
-  right: 30px;
-  z-index: 100;
-  background: none; /* Sin fondo */
-  border: none;     /* Sin bordes */
-  color: white;
-  cursor: pointer;
-  font-size: 24px;   /* Un poco más grande para que se vea bien */
-  padding: 0;
-  opacity: 0.6;      /* Un poco transparente para no molestar */
-  transition: opacity 0.3s ease;
-}
 
-.volume-btn:hover {
-  opacity: 1;        /* Se ilumina al pasar el ratón */
-}
 .project-info h2 {
   margin: 0;
   font-size: 16px;
