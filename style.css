@@ -104,6 +104,16 @@ button { font: inherit; }
   height: 100svh;
   overflow: hidden;
 }
+
+
+.video-portada {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Esto hace que el video llene toda la pantalla sin estirarse */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .slide {
   position: absolute;
   inset: 0;
@@ -233,3 +243,4 @@ h1 {
     grid-column: 1 / -1;
   }
 }
+
