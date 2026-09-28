@@ -5,94 +5,191 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="COCO ALPERI — Portfolio">
   <title>COCO ALPERI — Portfolio</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
   <!-- Intro / logo animation -->
   <div class="intro" id="intro" aria-label="COCO ALPERI">
     <div class="intro-logo">COCO ALPERI</div>
   </div>
 
   <header class="site-header">
-    <a class="logo" href="#home" aria-label="COCO ALPERI home">COCO ALPERI</a>
+
+    <a class="logo" href="#home" aria-label="COCO ALPERI home">
+      COCO ALPERI
+    </a>
+
     <nav class="main-nav" aria-label="Main navigation">
       <a href="#home">Home</a>
       <a href="#work">Work</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
+
   </header>
 
   <main>
-<section id="home" class="page page-home">
-  <div class="hero-video">
-    <video autoplay muted loop playsinline class="video-portada">
-      <source src="assets/Comp%1.mp4" type="video/mp4">
-    </video>
-  </div>
-</section>
 
-    <section id="work" class="page page-work">
-      <div class="section-heading">
-        <h1>Work</h1>
-        <div class="filters" aria-label="Filter projects">
-          <button class="filter active" data-filter="all">All</button>
-          <button class="filter" data-filter="advertising">Advertising</button>
-          <button class="filter" data-filter="branding">Branding</button>
-          <button class="filter" data-filter="editorial">Editorial</button>
-          <button class="filter" data-filter="digital">Digital</button>
-        </div>
+    <!-- HOME -->
+    <section id="home" class="page page-home">
+
+      <div class="hero-video">
+
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          class="video-portada"
+        >
+          <source src="assets/Comp%1.mp4" type="video/mp4">
+        </video>
+
       </div>
 
-      <div class="project-list">
-        <article class="project" data-category="advertising">
-          <a href="#" class="project-image"><span>PROJECT IMAGE</span></a>
-          <div class="project-info">
-            <h2>Project One</h2>
-            <span>2026</span>
-            <span>Advertising</span>
-          </div>
-        </article>
-
-       <article class="project" data-category="branding">
-  <a href="#" class="project-image">
-    <!-- Cambiamos el span por la imagen -->
-    <img src="assets/portada%20behance_Mesa%20de%20trabajo%201.png" alt="Copa de vino">
-  </a>
-  <div class="project-info">
-    <h2>Project Two</h2>
-    <span>2025</span>
-    <span>Branding</span>
-  </div>
-</article>
-
-        <article class="project" data-category="editorial">
-          <a href="#" class="project-image"><span>PROJECT IMAGE</span></a>
-          <div class="project-info">
-            <h2>Project Three</h2>
-            <span>2025</span>
-            <span>Editorial</span>
-          </div>
-        </article>
-
-        <article class="project" data-category="digital">
-          <a href="#" class="project-image"><span>PROJECT IMAGE</span></a>
-          <div class="project-info">
-            <h2>Project Four</h2>
-            <span>2025</span>
-            <span>Digital</span>
-          </div>
-        </article>
-      </div>
     </section>
 
+
+    <!-- WORK -->
+    <section id="work" class="page page-work">
+
+      <div class="section-heading">
+
+        <h1>Work</h1>
+
+        <div class="filters" aria-label="Filter projects">
+
+          <button class="filter active" data-filter="all">
+            All
+          </button>
+
+          <button class="filter" data-filter="advertising">
+            Advertising
+          </button>
+
+          <button class="filter" data-filter="branding">
+            Branding
+          </button>
+
+          <button class="filter" data-filter="editorial">
+            Editorial
+          </button>
+
+          <button class="filter" data-filter="digital">
+            Digital
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="project-list">
+
+        <article class="project" data-category="advertising">
+
+          <a href="#" class="project-image">
+            <span>PROJECT IMAGE</span>
+          </a>
+
+          <div class="project-info">
+
+            <h2>Project One</h2>
+
+            <span>2026</span>
+
+            <span>Advertising</span>
+
+          </div>
+
+        </article>
+
+
+        <article class="project" data-category="branding">
+
+          <a href="#" class="project-image">
+
+            <img
+              src="assets/portada%20behance_Mesa%20de%20trabajo%201.png"
+              alt="Copa de vino"
+            >
+
+          </a>
+
+          <div class="project-info">
+
+            <h2>Project Two</h2>
+
+            <span>2025</span>
+
+            <span>Branding</span>
+
+          </div>
+
+        </article>
+
+
+        <article class="project" data-category="editorial">
+
+          <a href="#" class="project-image">
+            <span>PROJECT IMAGE</span>
+          </a>
+
+          <div class="project-info">
+
+            <h2>Project Three</h2>
+
+            <span>2025</span>
+
+            <span>Editorial</span>
+
+          </div>
+
+        </article>
+
+
+        <article class="project" data-category="digital">
+
+          <a href="#" class="project-image">
+            <span>PROJECT IMAGE</span>
+          </a>
+
+          <div class="project-info">
+
+            <h2>Project Four</h2>
+
+            <span>2025</span>
+
+            <span>Digital</span>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
     <section id="about" class="page empty-page"></section>
+
+
+    <!-- CONTACT -->
     <section id="contact" class="page empty-page"></section>
+
   </main>
 
+
   <script src="script.js"></script>
+
 </body>
 </html>
