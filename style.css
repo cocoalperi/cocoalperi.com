@@ -330,7 +330,10 @@ h1 {
   /* PROJECT PAGE */
 
 .project-page {
+  width: 100%;
+  max-width: 100%;
   padding: 120px var(--pad) 60px;
+  overflow-x: hidden;
 }
 
 .project-hero {
@@ -339,6 +342,7 @@ h1 {
 
 .project-hero-image {
   width: 100%;
+  overflow: hidden;
   background: #e4e1da;
 }
 
@@ -369,13 +373,16 @@ h1 {
   gap: 30px;
   color: var(--muted);
   font-size: 12px;
+  white-space: nowrap;
 }
 
 .project-content {
+  width: 100%;
   padding-top: 60px;
 }
 
 .project-text {
+  width: 100%;
   max-width: 600px;
   margin-bottom: 80px;
 }
@@ -389,6 +396,7 @@ h1 {
 .project-image-large {
   width: 100%;
   margin-bottom: 24px;
+  overflow: hidden;
 }
 
 .project-image-large img {
@@ -400,6 +408,8 @@ h1 {
 .project-navigation {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 30px;
   padding-top: 50px;
   margin-top: 60px;
   border-top: 1px solid var(--line);
@@ -414,44 +424,129 @@ h1 {
 }
 
 
+/* PROJECT PAGE — TABLET */
+
+@media (max-width: 900px) {
+
+  .project-page {
+    padding-top: 110px;
+  }
+
+  .project-header {
+    gap: 25px;
+  }
+
+  .project-content {
+    padding-top: 50px;
+  }
+
+}
+
+
 /* PROJECT PAGE — MOBILE */
 
 @media (max-width: 650px) {
 
   .project-page {
-    padding: 100px var(--pad) 40px;
+    width: 100%;
+    padding: 95px var(--pad) 40px;
+    overflow-x: hidden;
+  }
+
+  .project-hero {
+    width: 100%;
+  }
+
+  .project-hero-image {
+    width: 100%;
+  }
+
+  .project-hero-image img {
+    width: 100%;
+    height: auto;
   }
 
   .project-header {
     display: block;
-    padding-top: 16px;
-    padding-bottom: 30px;
+    padding: 16px 0 28px;
   }
 
   .project-header h1 {
+    font-size: clamp(32px, 11vw, 52px);
     margin-bottom: 18px;
   }
 
   .project-meta {
-    gap: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    font-size: 12px;
+    white-space: normal;
   }
 
   .project-content {
+    width: 100%;
     padding-top: 40px;
   }
 
   .project-text {
-    margin-bottom: 50px;
+    width: 100%;
+    max-width: none;
+    margin-bottom: 45px;
   }
 
   .project-text p {
     font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .project-image-large {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .project-image-large img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   .project-navigation {
-    margin-top: 40px;
-    padding-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     gap: 20px;
+    padding-top: 30px;
+    margin-top: 40px;
   }
+
+  .project-navigation a {
+    font-size: 12px;
+  }
+
 }
+
+
+/* PROJECT PAGE — SMALL PHONES */
+
+@media (max-width: 400px) {
+
+  .project-page {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .project-header h1 {
+    font-size: 34px;
+  }
+
+  .project-meta {
+    gap: 6px 16px;
+  }
+
+  .project-navigation {
+    font-size: 12px;
+  }
+
 }
