@@ -20,7 +20,7 @@ body {
 a { color: inherit; text-decoration: none; }
 button { font: inherit; }
 
-/* --- ANIMACIÓN DE INTRO --- */
+/* --- INTRO ANIMATION --- */
 .intro {
   position: fixed;
   inset: 0;
@@ -45,7 +45,7 @@ button { font: inherit; }
   100% { opacity: 0; visibility: hidden; pointer-events: none; }
 }
 
-/* --- HEADER (Se adapta sobre el video) --- */
+/* --- HEADER --- */
 .site-header {
   position: fixed;
   z-index: 50;
@@ -56,29 +56,76 @@ button { font: inherit; }
   justify-content: space-between;
   align-items: center;
   padding: 22px var(--pad);
-  mix-blend-mode: difference; /* El texto cambia de color según el fondo */
+  mix-blend-mode: difference; 
   color: white; 
 }
 .logo {
   font-size: 15px;
   letter-spacing: -.025em;
-  white-space: nowrap;
 }
 .main-nav {
   display: flex;
   gap: clamp(18px, 3vw, 42px);
 }
-.main-nav a,
-.filter {
+.main-nav a {
+  font-size: 13px;
   position: relative;
+}
+
+/* --- HOME (VIDEO RESPONSIVO) --- */
+.page-home {
+  padding: 0 !important;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+  position: relative;
+}
+.video-portada {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Clave para móvil */
+  object-position: center;
+}
+
+/* --- WORK SECTION (ESTRUCTURA RECUPERADA) --- */
+.page {
+  padding: 100px var(--pad) 60px;
+}
+.page-work {
+  padding-top: 125px;
+}
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 30px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 18px;
+  margin-bottom: 0;
+}
+h1 {
+  margin: 0;
+  font-size: clamp(28px, 5vw, 60px);
+  font-weight: 400;
+  letter-spacing: -.05em;
+}
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+.filter {
   border: 0;
   background: none;
   padding: 0;
   cursor: pointer;
   font-size: 13px;
+  position: relative;
+  color: var(--text);
 }
-.main-nav a::after,
-.filter::after {
+.filter::after, .main-nav a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -88,46 +135,59 @@ button { font: inherit; }
   background: currentColor;
   transition: right .25s ease;
 }
-.main-nav a:hover::after,
-.filter:hover::after,
-.filter.active::after { right: 0; }
+.filter:hover::after, .filter.active::after, .main-nav a:hover::after {
+  right: 0;
+}
 
-/* --- SECCIÓN HOME (VIDEO ÚNICO) --- */
-.page-home {
-  position: relative;
+/* --- PROYECTOS --- */
+.project {
+  border-bottom: 1px solid var(--line);
+  padding: 24px 0 28px;
+}
+.project-image {
+  display: block;
   width: 100%;
-  height: 100vh;
-  height: 100svh; /* Altura perfecta en móviles */
-  padding: 0 !important;
-  margin: 0;
+  background: #e4e1da;
   overflow: hidden;
-  display: block;
 }
-
-.video-portada {
+.project-image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* Cubre toda la pantalla sin deformarse */
-  object-position: center;
+  height: auto;
   display: block;
+  object-fit: cover;
+}
+.project-info {
+  display: grid;
+  grid-template-columns: 1fr auto auto; /* Tres columnas: Nombre | Año | Categoría */
+  gap: 25px;
+  align-items: baseline;
+  padding-top: 12px;
+}
+.project-info h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+.project-info span {
+  color: var(--muted);
+  font-size: 12px;
+  white-space: nowrap;
 }
 
-/* --- RESTO DE PÁGINAS --- */
-.page {
-  min-height: 100vh;
-  padding: 100px var(--pad) 60px;
-}
-
-.page-work {
-  padding-top: 125px;
-}
-
-/* Ajustes para móviles */
-@media (max-width: 650px) {
-  .site-header {
-    padding: 18px var(--pad);
-  }
-  .main-nav {
+/* --- MÓVIL --- */
+@media (max-width: 768px) {
+  .section-heading {
+    flex-direction: column;
+    align-items: flex-start;
     gap: 15px;
+  }
+  .filters {
+    gap: 10px 15px;
+  }
+  .project-info {
+    grid-template-columns: 1fr auto; /* En móvil colapsamos a dos columnas */
+  }
+  .project-info span:last-child {
+    grid-column: 1 / -1; /* La categoría pasa abajo si no cabe */
   }
 }
