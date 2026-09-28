@@ -1,4 +1,3 @@
-```css
 :root {
   --bg: #f7f5f0;
   --text: #111;
@@ -33,11 +32,7 @@ button {
   font: inherit;
 }
 
-
-/* =========================
-   INTRO
-   ========================= */
-
+/* INTRO */
 .intro {
   position: fixed;
   inset: 0;
@@ -83,24 +78,17 @@ button {
   }
 }
 
-
-/* =========================
-   HEADER
-   ========================= */
-
+/* HEADER */
 .site-header {
   position: fixed;
   z-index: 50;
   top: 0;
   left: 0;
   width: 100%;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 22px var(--pad);
-
   mix-blend-mode: multiply;
 }
 
@@ -143,27 +131,20 @@ button {
   right: 0;
 }
 
-
-/* =========================
-   PAGES
-   ========================= */
-
+/* PAGES */
 .page {
   min-height: 100vh;
   padding: 100px var(--pad) 60px;
 }
 
-
-/* =========================
-   HOME / VIDEO
-   ========================= */
-
+/* HOME / VIDEO */
 .page-home {
   min-height: 100svh;
   min-height: 100dvh;
   padding: 0;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-video {
@@ -182,86 +163,63 @@ button {
   object-position: center center;
 }
 
-
-/* =========================
-   MOBILE VIDEO
-   ========================= */
-
+/* MOBILE VIDEO */
 @media (max-width: 650px) {
-
   .page-home {
     width: 100%;
-    height: 100svh;
-    height: 100dvh;
     min-height: 100svh;
     min-height: 100dvh;
     padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .hero-video {
     width: 100%;
-    height: 100svh;
-    height: 100dvh;
+    height: auto;
+    min-height: 0;
+    overflow: hidden;
   }
 
   .video-portada {
+    position: relative;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    min-height: 0;
+    display: block;
+    object-fit: contain;
     object-position: center center;
   }
-
 }
 
-
-/* =========================
-   MOBILE VERTICAL
-   ========================= */
-
+/* MOBILE VERTICAL */
 @media (max-width: 650px) and (orientation: portrait) {
-
   .hero-video {
     width: 100vw;
-    height: 100svh;
-    height: 100dvh;
+    height: auto;
   }
 
   .video-portada {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
+    height: auto;
   }
-
 }
 
-
-/* =========================
-   MOBILE HORIZONTAL
-   ========================= */
-
+/* MOBILE HORIZONTAL */
 @media (max-width: 900px) and (orientation: landscape) {
-
   .hero-video {
     width: 100vw;
-    height: 100svh;
-    height: 100dvh;
+    height: auto;
   }
 
   .video-portada {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
+    height: auto;
   }
-
 }
 
-
-/* =========================
-   WORK
-   ========================= */
-
+/* WORK */
 .page-work {
   padding-top: 125px;
 }
@@ -271,9 +229,7 @@ button {
   justify-content: space-between;
   align-items: baseline;
   gap: 30px;
-
   border-bottom: 1px solid var(--line);
-
   padding-bottom: 18px;
   margin-bottom: 0;
 }
@@ -291,11 +247,7 @@ h1 {
   gap: 18px;
 }
 
-
-/* =========================
-   PROJECTS
-   ========================= */
-
+/* PROJECTS */
 .project {
   border-bottom: 1px solid var(--line);
   padding: 24px 0 28px;
@@ -340,22 +292,13 @@ h1 {
   display: none;
 }
 
-
-/* =========================
-   EMPTY PAGES
-   ========================= */
-
+/* EMPTY PAGES */
 .empty-page {
   min-height: 100vh;
 }
 
-
-/* =========================
-   MOBILE
-   ========================= */
-
+/* MOBILE */
 @media (max-width: 650px) {
-
   .site-header {
     align-items: flex-start;
     gap: 18px;
@@ -383,6 +326,4 @@ h1 {
   .project-info span:last-child {
     grid-column: 1 / -1;
   }
-
 }
-```
