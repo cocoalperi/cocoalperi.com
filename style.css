@@ -607,5 +607,43 @@ h1 {
   .project-navigation {
     font-size: 12px;
   }
+  /* =========================================================
+   TWO IMAGES SIDE BY SIDE
+   ========================================================= */
+
+.project-image-large {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.project-image-large img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   TWO IMAGES — MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+  .project-image-large {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .project-image-large img {
+    width: 100%;
+    height: auto;
+  }
+
+}
 
 }
