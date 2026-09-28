@@ -27,10 +27,25 @@
   </header>
 
   <main>
-<section id="home" class="page-home">
-  <video id="heroVideo" autoplay muted loop playsinline class="video-portada">
-    <source src="assets/Comp 1.mp4" type="video/mp4">
-  </video>
+<section id="home" class="page page-home">
+ <div class="hero-carousel" aria-label="Featured work">
+    <!-- Slide con Video -->
+    <div class="slide active">
+       <video autoplay muted loop playsinline class="video-portada">
+          <source src="assets/videoExpo.mp4" type="video/mp4">
+       </video>
+    </div>
+
+    <!-- Otros Slides si los tienes -->
+    <div class="slide">
+       <div class="image-placeholder">Imagen 02</div>
+    </div>
+
+    <!-- ESTO ES LO QUE FALTA Y HACE QUE EL SCRIPT DE ERROR: -->
+    <button class="carousel-arrow prev">←</button>
+    <button class="carousel-arrow next">→</button>
+    <div class="carousel-dots"></div> <!-- Esta línea es vital -->
+</div>
 </section>
 
     <section id="work" class="page page-work">
@@ -55,44 +70,18 @@
           </div>
         </article>
 
-        <article class="project" data-category="branding">
-          <a href="#" class="project-image">
-            <img src="assets/portada behance_Mesa de trabajo 1.png" alt="Logo vino">
-          </a>
-          <div class="project-info">
-            <h2>Project Two</h2>
-            <span>2025</span>
-            <span>Branding</span>
-          </div>
-        </article>
+       <article class="project" data-category="branding">
+  <a href="#" class="project-image">
+    <!-- Cambiamos el span por la imagen -->
+    <img src="assets/portada%20behance_Mesa%20de%20trabajo%201.png" alt="Copa de vino">
+  </a>
+  <div class="project-info">
+    <h2>Project Two</h2>
+    <span>2025</span>
+    <span>Branding</span>
+  </div>
+</article>
 
-        <article class="project" data-category="editorial">
-          <a href="#" class="project-image"><span>PROJECT IMAGE</span></a>
-          <div class="project-info">
-            <h2>Project Three</h2>
-            <span>2025</span>
-            <span>Editorial</span>
-          </div>
-        </article>
-
-        <article class="project" data-category="digital">
-          <a href="#" class="project-image"><span>PROJECT IMAGE</span></a>
-          <div class="project-info">
-            <h2>Project Four</h2>
-            <span>2025</span>
-            <span>Digital</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="about" class="page empty-page"></section>
-    <section id="contact" class="page empty-page"></section>
-  </main>
-
-  <script src="script.js"></script>
-</body>
-</html>
         <article class="project" data-category="editorial">
           <a href="#" class="project-image"><span>PROJECT IMAGE</span></a>
           <div class="project-info">
