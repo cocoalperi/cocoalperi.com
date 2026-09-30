@@ -641,7 +641,14 @@ h1 {
     width: 100%;
     height: auto;
   }
-
+.project-image img,
+.project-hero-image img,
+.project-image-large img {
+  width: 60% !important;
+  height: auto !important;
+  margin-left: auto;
+  margin-right: auto;
+}
 }
 
 }
