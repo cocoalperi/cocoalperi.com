@@ -617,27 +617,3 @@ h1 {
     height: auto;
   }
 }
-
-/* =========================================================
-   IMÁGENES AL 60% Y LADO A LADO (SOLO ORDENADOR)
-   ========================================================= */
-
-@media (min-width: 651px) {
-  .project-image-large {
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-  }
-
-  .project-image-large img {
-    width: 100% !important; 
-    height: auto !important;
-    display: block;
-    object-fit: cover;
-  }
-}
-
-```
