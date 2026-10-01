@@ -32,7 +32,6 @@ button {
   font: inherit;
 }
 
-
 /* =========================================================
    INTRO
    ========================================================= */
@@ -81,7 +80,6 @@ button {
     pointer-events: none;
   }
 }
-
 
 /* =========================================================
    HEADER
@@ -139,7 +137,6 @@ button {
   right: 0;
 }
 
-
 /* =========================================================
    PAGES
    ========================================================= */
@@ -148,7 +145,6 @@ button {
   min-height: 100vh;
   padding: 100px var(--pad) 60px;
 }
-
 
 /* =========================================================
    HOME / VIDEO
@@ -179,13 +175,11 @@ button {
   object-position: center center;
 }
 
-
 /* =========================================================
    MOBILE VIDEO
    ========================================================= */
 
 @media (max-width: 650px) {
-
   .page-home {
     width: 100%;
     min-height: 0;
@@ -212,13 +206,11 @@ button {
   }
 }
 
-
 /* =========================================================
    MOBILE VERTICAL
    ========================================================= */
 
 @media (max-width: 650px) and (orientation: portrait) {
-
   .hero-video {
     width: 100vw;
     height: auto;
@@ -229,14 +221,12 @@ button {
     height: auto;
   }
 }
-
 
 /* =========================================================
    MOBILE HORIZONTAL
    ========================================================= */
 
 @media (max-width: 900px) and (orientation: landscape) {
-
   .hero-video {
     width: 100vw;
     height: auto;
@@ -247,7 +237,6 @@ button {
     height: auto;
   }
 }
-
 
 /* =========================================================
    WORK
@@ -279,7 +268,6 @@ h1 {
   flex-wrap: wrap;
   gap: 18px;
 }
-
 
 /* =========================================================
    PROJECTS
@@ -329,7 +317,6 @@ h1 {
   display: none;
 }
 
-
 /* =========================================================
    EMPTY PAGES
    ========================================================= */
@@ -338,13 +325,11 @@ h1 {
   min-height: 100vh;
 }
 
-
 /* =========================================================
    MOBILE — MAIN WEBSITE
    ========================================================= */
 
 @media (max-width: 650px) {
-
   .site-header {
     align-items: flex-start;
     gap: 18px;
@@ -372,9 +357,7 @@ h1 {
   .project-info span:last-child {
     grid-column: 1 / -1;
   }
-
 }
-
 
 /* =========================================================
    PROJECT PAGE
@@ -474,13 +457,11 @@ h1 {
   text-decoration: underline;
 }
 
-
 /* =========================================================
    PROJECT PAGE — TABLET
    ========================================================= */
 
 @media (max-width: 900px) {
-
   .project-page {
     padding-top: 110px;
   }
@@ -492,16 +473,13 @@ h1 {
   .project-content {
     padding-top: 50px;
   }
-
 }
-
 
 /* =========================================================
    PROJECT PAGE — MOBILE
    ========================================================= */
 
 @media (max-width: 650px) {
-
   .project-page {
     width: 100%;
     padding: 95px var(--pad) 40px;
@@ -579,16 +557,13 @@ h1 {
   .project-navigation a {
     font-size: 12px;
   }
-
 }
-
 
 /* =========================================================
    PROJECT PAGE — SMALL PHONES
    ========================================================= */
 
 @media (max-width: 400px) {
-
   .project-page {
     padding-left: 18px;
     padding-right: 18px;
@@ -605,46 +580,35 @@ h1 {
   .project-navigation {
     font-size: 12px;
   }
+}
 
+/* =========================================================
+   IMÁGENES AL 60% Y LADO A LADO (SOLO ORDENADOR)
+   ========================================================= */
 
-  /* =========================================================
-     TWO IMAGES SIDE BY SIDE
-     ========================================================= */
-
+@media (min-width: 651px) {
   .project-image-large {
-    width: 100%;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 24px;
-    margin-bottom: 24px;
-    overflow: hidden;
   }
 
   .project-image-large img {
-    width: 100%;
-    height: auto;
+    width: 100% !important; 
+    height: auto !important;
     display: block;
-    object-fit: contain;
+    object-fit: cover;
   }
 
-}
-
-
-/* =========================================================
-   TWO IMAGES — MOBILE
-   ========================================================= */
-
-@media (max-width: 650px) {
-
-  .project-image-large {
-    grid-template-columns: 1fr;
-    gap: 16px;
+  .project-hero-image img,
+  .project-image img {
+    width: 60% !important;
+    height: auto !important;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
   }
-
-  .project-image-large img {
-    width: 100%;
-    height: auto;
-  }
-
-}
 }
