@@ -1,3 +1,8 @@
+Aquí tienes el código CSS completo, integrando la corrección para que las portadas (`.project-hero-image`) y las miniaturas de los proyectos (`.project-image`) se vean enteras al 100%, mientras que las imágenes dobles del interior de los proyectos (`.project-image-large`) se queden al 60% de ancho y una al lado de la otra (solo en la versión de ordenador).
+
+Puedes copiar y pegar todo este bloque de código para reemplazar el de tu archivo actual:
+
+```css
 :root {
   --bg: #f7f5f0;
   --text: #111;
@@ -580,6 +585,42 @@ h1 {
   .project-navigation {
     font-size: 12px;
   }
+
+  /* =========================================================
+     TWO IMAGES SIDE BY SIDE
+     ========================================================= */
+
+  .project-image-large {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+    overflow: hidden;
+  }
+
+  .project-image-large img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+}
+
+/* =========================================================
+   TWO IMAGES — MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+  .project-image-large {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .project-image-large img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 /* =========================================================
@@ -602,13 +643,6 @@ h1 {
     display: block;
     object-fit: cover;
   }
-
-  .project-hero-image img,
-  .project-image img {
-    width: 60% !important;
-    height: auto !important;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-  }
 }
+
+```
