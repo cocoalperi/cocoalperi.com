@@ -149,7 +149,14 @@ button {
 /* =========================================================
    HOME / VIDEO
    ========================================================= */
-
+.video-portada {
+  width: 100%;             /* Se adapta al ancho del contenedor */
+  max-width: 100%;         /* Evita que se salga por la derecha en móviles */
+  height: auto;            /* Mantiene la proporción original sin deformarse */
+  display: block;          /* Elimina espacios fantasma inline */
+  box-sizing: border-box;  /* Incluye rellenos y bordes en el ancho total */
+  margin-bottom: 2rem;     /* Distancia con la foto de abajo (ajusta según necesites) */
+}
 .page-home {
   min-height: 100svh;
   min-height: 100dvh;
