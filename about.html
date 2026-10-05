@@ -7,6 +7,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Estilos globales compartidos con tu web principal -->
+  <link rel="stylesheet" href="style.css">
+
   <style>
     * {
       box-sizing: border-box;
@@ -21,6 +25,40 @@
       line-height: 1.45;
       font-size: 13.5px;
       padding: 48px;
+    }
+
+    /* Estilos del Header por si no los cargase style.css */
+    .site-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 48px;
+      margin-bottom: 24px;
+    }
+
+    .site-header .logo {
+      font-weight: 700;
+      font-size: 14px;
+      color: #111111;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+    }
+
+    .site-header .main-nav {
+      display: flex;
+      gap: 24px;
+    }
+
+    .site-header .main-nav a {
+      font-size: 13.5px;
+      color: #111111;
+      text-decoration: none;
+      font-weight: 500;
+      transition: opacity 0.2s ease;
+    }
+
+    .site-header .main-nav a:hover {
+      opacity: 0.6;
     }
 
     /* Títulos en azul */
@@ -152,6 +190,12 @@
       body {
         padding: 24px;
       }
+      .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding-bottom: 32px;
+      }
       .top-grid {
         grid-template-columns: 1fr;
         gap: 36px;
@@ -165,6 +209,20 @@
   </style>
 </head>
 <body>
+
+  <!-- AQUÍ VA EL HEADER (Justo al inicio de <body>) -->
+  <header class="site-header">
+    <a class="logo" href="index.html#home" aria-label="COCO ALPERI home">
+      COCO ALPERI
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#work">Work</a>
+      <a href="about.html">About</a>
+      <a href="#address">Contact</a>
+    </nav>
+  </header>
 
   <!-- Parte Superior -->
   <main class="top-grid">
@@ -237,7 +295,7 @@
     </section>
 
     <!-- Address (Social eliminada) -->
-    <section class="info-col">
+    <section class="info-col" id="address">
       <h2 class="section-title">Address</h2>
       <p class="meta-text">Oviedo / Asturias<br>España</p>
       <p class="meta-text-en">Oviedo / Asturias<br>Spain</p>
