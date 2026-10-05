@@ -8,7 +8,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   
-  <!-- Estilos globales compartidos -->
   <link rel="stylesheet" href="style.css">
 
   <style>
@@ -41,7 +40,7 @@
       text-transform: uppercase;
     }
 
-    /* Grilla ajustada: Columna 1 (Profile) más estrecha, Columna 2 (About) más ancha */
+    /* Distribución Profile (izquierda, contenido) + About (derecha, texto amplio) */
     .top-grid {
       display: grid;
       grid-template-columns: 1fr 1.8fr;
@@ -121,35 +120,6 @@
       display: block;
     }
 
-    .services-section {
-      border-top: 1px solid var(--line);
-      padding-top: 56px;
-    }
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 40px clamp(24px, 4vw, 64px);
-    }
-    .service-item h4 {
-      font-size: 13.5px;
-      font-weight: 500;
-      color: #777777;
-      margin-bottom: 6px;
-    }
-    .service-desc-es {
-      font-size: 13px;
-      line-height: 1.5;
-      color: #111111;
-      font-weight: 400;
-      margin-bottom: 8px;
-    }
-    .service-desc-en {
-      font-size: 12.5px;
-      line-height: 1.5;
-      color: #666666;
-      font-style: italic;
-    }
-
     @media (max-width: 650px) {
       .about-page {
         padding-top: 85px;
@@ -166,10 +136,6 @@
         grid-template-columns: 1fr;
         gap: 36px;
         margin-bottom: 48px;
-      }
-      .services-grid {
-        grid-template-columns: 1fr;
-        gap: 28px;
       }
     }
   </style>
@@ -196,7 +162,7 @@
 
       <!-- 1. PROFILE (Columna Izquierda) -->
       <section class="fam-col">
-        <h2 class="section-title">About</h2>
+        <h2 class="section-title">Profile</h2>
 
         <div class="profile-photo">
           <img src="assets/fotoAbout.jpg" alt="Covadonga Alperi">
@@ -229,7 +195,7 @@
 
       <!-- 2. ABOUT (Columna Derecha) -->
       <section class="about-col">
-        <h2 class="section-title">Profile</h2>
+        <h2 class="section-title">About</h2>
 
         <div class="about-block">
           <span class="lang-badge">ES</span>
