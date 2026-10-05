@@ -40,24 +40,13 @@
       text-transform: uppercase;
     }
 
-    /* Cuadrícula de 2 columnas: 
-       Columna 1 (About / Foto y datos): 1fr (ancho contenido)
-       Columna 2 (Profile / Textos): 1.8fr (ancho amplio de lectura)
-    */
+    /* Cuadrícula fija: Columna izquierda (About) 280px, Columna derecha (Profile) el resto */
     .top-grid {
       display: grid;
-      grid-template-columns: 1fr 1.8fr;
-      gap: clamp(28px, 5vw, 64px);
+      grid-template-columns: 280px 1fr;
+      gap: clamp(32px, 5vw, 64px);
       margin-bottom: 80px;
-    }
-
-    /* Forzamos el orden visual con order */
-    .col-about {
-      order: 1; /* Siempre primera columna (izquierda) */
-    }
-
-    .col-profile {
-      order: 2; /* Siempre segunda columna (derecha) */
+      align-items: start;
     }
 
     .about-block {
@@ -132,7 +121,8 @@
       display: block;
     }
 
-    @media (max-width: 650px) {
+    /* En móvil se apilan: primero About (foto), luego Profile */
+    @media (max-width: 768px) {
       .about-page {
         padding-top: 85px;
         padding-bottom: 48px;
@@ -172,8 +162,10 @@
     
     <main class="top-grid">
 
-      <!-- 1. Columna Izquierda: ABOUT (Foto + Datos + Disponibilidad) -->
-      <section class="col-about">
+      <!-- ======================================================== -->
+      <!-- 1. COLUMNA IZQUIERDA: ABOUT (Foto y datos personales)    -->
+      <!-- ======================================================== -->
+      <section class="about-left-col">
         <h2 class="section-title">About</h2>
 
         <div class="profile-photo">
@@ -205,8 +197,10 @@
         </div>
       </section>
 
-      <!-- 2. Columna Derecha: PROFILE (Textos explicativos) -->
-      <section class="col-profile">
+      <!-- ======================================================== -->
+      <!-- 2. COLUMNA DERECHA: PROFILE (Textos explicativos)        -->
+      <!-- ======================================================== -->
+      <section class="profile-right-col">
         <h2 class="section-title">Profile</h2>
 
         <div class="about-block">
