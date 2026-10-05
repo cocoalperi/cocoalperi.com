@@ -40,12 +40,24 @@
       text-transform: uppercase;
     }
 
-    /* Distribución Profile (izquierda, contenido) + About (derecha, texto amplio) */
+    /* Cuadrícula de 2 columnas: 
+       Columna 1 (About / Foto y datos): 1fr (ancho contenido)
+       Columna 2 (Profile / Textos): 1.8fr (ancho amplio de lectura)
+    */
     .top-grid {
       display: grid;
       grid-template-columns: 1fr 1.8fr;
       gap: clamp(28px, 5vw, 64px);
       margin-bottom: 80px;
+    }
+
+    /* Forzamos el orden visual con order */
+    .col-about {
+      order: 1; /* Siempre primera columna (izquierda) */
+    }
+
+    .col-profile {
+      order: 2; /* Siempre segunda columna (derecha) */
     }
 
     .about-block {
@@ -160,8 +172,8 @@
     
     <main class="top-grid">
 
-      <!-- 1. PROFILE (Columna Izquierda) -->
-      <section class="fam-col">
+      <!-- 1. Columna Izquierda: ABOUT (Foto + Datos + Disponibilidad) -->
+      <section class="col-about">
         <h2 class="section-title">About</h2>
 
         <div class="profile-photo">
@@ -193,8 +205,8 @@
         </div>
       </section>
 
-      <!-- 2. ABOUT (Columna Derecha) -->
-      <section class="about-col">
+      <!-- 2. Columna Derecha: PROFILE (Textos explicativos) -->
+      <section class="col-profile">
         <h2 class="section-title">Profile</h2>
 
         <div class="about-block">
