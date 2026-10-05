@@ -279,28 +279,30 @@ h1 {
 }
 
 /* =========================================================
-   PROJECTS (Ajustado para tamaño armónico en escritorio)
+   PROJECTS (Formato uniforme y recorte limpio)
    ========================================================= */
 
 .project {
   border-bottom: 1px solid var(--line);
   padding: 24px 0 28px;
-  scroll-margin-top: 100px; /* Evita que el header tape el proyecto al hacer scroll */
+  scroll-margin-top: 100px;
 }
 
 .project-image {
   display: block;
   background: #e4e1da;
   color: #8b8881;
-  max-width: 820px; /* Ancho máximo en pantallas grandes */
-  margin: 0 auto;   /* Centra la imagen */
+  max-width: 820px;
+  margin: 0 auto;
+  overflow: hidden;
+  aspect-ratio: 16 / 10; /* Misma proporción exacta para todas las cajas */
 }
 
 .project-image img {
   width: 100%;
-  height: auto;
-  max-height: 70vh; /* Evita que la foto sea más alta que la pantalla */
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover; /* Llena toda el área sin bandas sobrantes */
+  object-position: center;
   display: block;
 }
 
@@ -314,7 +316,7 @@ h1 {
   gap: 25px;
   align-items: baseline;
   padding-top: 14px;
-  max-width: 820px; /* Alineado al mismo ancho que la imagen */
+  max-width: 820px;
   margin: 0 auto;
 }
 
