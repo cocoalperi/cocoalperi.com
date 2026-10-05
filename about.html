@@ -6,7 +6,7 @@
   <title>Covadonga Alperi — Creative Studio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
@@ -15,7 +15,7 @@
     }
 
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background-color: #fafafa;
       color: #111111;
       line-height: 1.45;
@@ -23,38 +23,62 @@
       padding: 48px;
     }
 
+    /* Títulos en azul */
     .section-title {
-      color: #ff3366;
+      color: #0055ff;
       font-size: 13px;
       font-weight: 600;
-      margin-bottom: 12px;
-      text-transform: capitalize;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* Etiquetas de idioma */
+    .lang-badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      color: #888888;
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+      text-transform: uppercase;
     }
 
     /* Grilla superior: 3 columnas */
     .top-grid {
       display: grid;
-      grid-template-columns: 2fr 1.2fr 1fr;
+      grid-template-columns: 2fr 1.2fr 0.8fr;
       gap: 56px;
       margin-bottom: 72px;
     }
 
-    /* Columna About */
-    .about-col p {
-      margin-bottom: 20px;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 1.5;
-      color: #111;
-      max-width: 95%;
+    /* Bloques de About */
+    .about-block {
+      margin-bottom: 24px;
     }
-    .about-col p:last-child {
+    .about-block:last-child {
       margin-bottom: 0;
     }
 
-    /* Columna Fam / Equipo */
+    .lang-es {
+      color: #111111;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.55;
+      margin-bottom: 12px;
+    }
+
+    .lang-en {
+      color: #666666;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 1.55;
+      font-style: italic;
+    }
+
+    /* Miembros / Fam */
     .member-group {
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
     .member-group:last-child {
       margin-bottom: 0;
@@ -64,63 +88,64 @@
       color: #777777;
       font-size: 13px;
       display: block;
-      margin-bottom: 1px;
+      margin-bottom: 2px;
     }
     .member-role {
       font-weight: 600;
       color: #111111;
       font-size: 13.5px;
+      display: block;
+    }
+    .member-role-en {
+      font-weight: 400;
+      color: #666666;
+      font-size: 12.5px;
+      font-style: italic;
+      display: block;
     }
 
-    /* Columna Address & Social */
-    .meta-block {
-      margin-bottom: 32px;
-    }
-    .meta-block:last-child {
-      margin-bottom: 0;
-    }
+    /* Address */
     .meta-text {
       font-weight: 600;
-      color: #111;
+      color: #111111;
       line-height: 1.5;
+      font-size: 13.5px;
     }
-    .social-list {
-      list-style: none;
-    }
-    .social-list li {
-      margin-bottom: 3px;
-    }
-    .social-list a {
-      color: #111;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.15s ease;
-    }
-    .social-list a:hover {
-      color: #ff3366;
+    .meta-text-en {
+      color: #666666;
+      font-size: 12.5px;
+      font-style: italic;
+      margin-top: 4px;
     }
 
-    /* Sección inferior: Servicios en 2 columnas */
+    /* Sección de Servicios */
     .services-section {
-      border-top: 1px solid #eeeeee;
+      border-top: 1px solid #e5e5e5;
       padding-top: 40px;
     }
     .services-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 36px 64px;
+      gap: 40px 64px;
     }
     .service-item h4 {
       font-size: 13.5px;
       font-weight: 700;
       color: #777777;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
-    .service-item p {
+    .service-desc-es {
       font-size: 13px;
       line-height: 1.5;
       color: #111111;
-      font-weight: 600;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    .service-desc-en {
+      font-size: 12.5px;
+      line-height: 1.5;
+      color: #666666;
+      font-style: italic;
     }
 
     @media (max-width: 900px) {
@@ -134,7 +159,7 @@
       }
       .services-grid {
         grid-template-columns: 1fr;
-        gap: 28px;
+        gap: 32px;
       }
     }
   </style>
@@ -143,106 +168,136 @@
 
   <!-- Parte Superior -->
   <main class="top-grid">
-    <!-- Columna 1: About -->
+
+    <!-- About -->
     <section class="about-col">
       <h2 class="section-title">About</h2>
-      <p>
-        COVADONGA ALPERI operates as an Asturias-based Independent Creative Studio focusing on visual identity, editorial design, art direction, and tactile branding experiences.
-      </p>
-      <p>
-        Led by designer and art director Covadonga Alperi, the studio moves fluidly between meticulous technical execution and deep conceptual narratives, crafting bespoke visual languages with high emotional resonance.
-      </p>
-      <p>
-        Whether developing a brand's core identity from the ground up, curating product aesthetics, or directing physical and digital editorial pieces, our work remains intentional, tactile, and rooted in the aesthetics of now.
-      </p>
+
+      <div class="about-block">
+        <span class="lang-badge">ES</span>
+        <p class="lang-es">
+          COVADONGA ALPERI es un estudio de diseño independiente afincado en Asturias, centrado en identidad visual, diseño editorial, dirección de arte y branding táctil.
+        </p>
+        <span class="lang-badge">EN</span>
+        <p class="lang-en">
+          COVADONGA ALPERI operates as an Asturias-based independent design studio focusing on visual identity, editorial design, art direction, and tactile branding experiences.
+        </p>
+      </div>
+
+      <div class="about-block">
+        <span class="lang-badge">ES</span>
+        <p class="lang-es">
+          Liderado por Covadonga Alperi, el estudio transita entre la técnica y la narrativa conceptual para dar vida a lenguajes visuales singulares con una alta carga sensible y estética.
+        </p>
+        <span class="lang-badge">EN</span>
+        <p class="lang-en">
+          Led by Covadonga Alperi, the studio moves fluidly between technical execution and conceptual narrative to create singular visual languages with high aesthetic sensitivity.
+        </p>
+      </div>
+
+      <div class="about-block">
+        <span class="lang-badge">ES</span>
+        <p class="lang-es">
+          Ya sea construyendo la identidad de una marca desde cero, comisariando fotografía de producto o diseñando piezas editoriales, nuestro enfoque es intencional, tangible y conectado con la estética actual.
+        </p>
+        <span class="lang-badge">EN</span>
+        <p class="lang-en">
+          Whether building brand identity from scratch, curating product photography, or designing editorial pieces, our approach remains intentional, tactile, and connected to the aesthetics of now.
+        </p>
+      </div>
     </section>
 
-    <!-- Columna 2: Fam -->
+    <!-- Fam -->
     <section class="fam-col">
       <h2 class="section-title">Fam</h2>
+
       <div class="member-group">
         <span class="member-name">Covadonga Alperi</span>
-        <span class="member-role">Founder & Creative Director</span>
+        <span class="member-role">Fundadora y Directora Creativa</span>
+        <span class="member-role-en">Founder & Creative Director</span>
       </div>
+
       <div class="member-group">
-        <span class="member-name">Creative Network</span>
-        <span class="member-role">Editorial & Print Production</span>
+        <span class="member-name">Red Creativa / Creative Network</span>
+        <span class="member-role">Producción Editorial e Impresa</span>
+        <span class="member-role-en">Editorial & Print Production</span>
       </div>
+
       <div class="member-group">
-        <span class="member-name">Digital Collaborators</span>
-        <span class="member-role">Front-end & Interactive Development</span>
+        <span class="member-name">Colaboradores Digitales / Digital Team</span>
+        <span class="member-role">Desarrollo Web e Interactivo</span>
+        <span class="member-role-en">Front-end & Interactive Development</span>
       </div>
+
       <div class="member-group">
-        <span class="member-name">Visual Lab</span>
-        <span class="member-role">Still Life & Fashion Photography</span>
+        <span class="member-name">Laboratorio Visual / Visual Lab</span>
+        <span class="member-role">Fotografía de Producto y Moda</span>
+        <span class="member-role-en">Still Life & Fashion Photography</span>
       </div>
     </section>
 
-    <!-- Columna 3: Address & Social -->
+    <!-- Address (Social eliminada) -->
     <section class="info-col">
-      <div class="meta-block">
-        <h2 class="section-title">Address</h2>
-        <p class="meta-text">Oviedo / Asturias<br>Spain</p>
-      </div>
-
-      <div class="meta-block">
-        <h2 class="section-title">Social</h2>
-        <ul class="social-list">
-          <li><a href="mailto:kvadonga@gmail.com">Mail</a></li>
-          <li><a href="https://cocoalperi.com" target="_blank" rel="noopener">Website</a></li>
-          <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
-          <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="https://behance.net" target="_blank" rel="noopener">Behance</a></li>
-        </ul>
-      </div>
+      <h2 class="section-title">Address</h2>
+      <p class="meta-text">Oviedo / Asturias<br>España</p>
+      <p class="meta-text-en">Oviedo / Asturias<br>Spain</p>
     </section>
+
   </main>
 
   <!-- Parte Inferior: Services -->
   <section class="services-section">
     <h2 class="section-title">Services</h2>
     <div class="services-grid">
+
       <article class="service-item">
-        <h4>Creative Direction</h4>
-        <p>
-          We act as a strategic and visual partner, shaping the conceptual, artistic, and narrative foundation of brands, collections, and campaigns from the ground up.
-        </p>
+        <h4>Dirección Creativa / Creative Direction</h4>
+        <span class="lang-badge">ES</span>
+        <p class="service-desc-es">Acompañamiento conceptual y estético para construir la narrativa y el universo visual de marcas y proyectos desde su origen.</p>
+        <span class="lang-badge">EN</span>
+        <p class="service-desc-en">Conceptual and aesthetic guidance to shape the narrative and visual universe of brands and projects from scratch.</p>
       </article>
 
       <article class="service-item">
-        <h4>Art Direction & Product Photography</h4>
-        <p>
-          Curating set design, still life compositions, and aesthetic visual narratives tailored for fashion labels, jewelry, design objects, and lifestyle products.
-        </p>
+        <h4>Identidad Visual / Brand Identity</h4>
+        <span class="lang-badge">ES</span>
+        <p class="service-desc-es">Diseño de sistemas visuales integrales, dirección tipográfica, paletas cromáticas y aplicaciones gráficas memorables.</p>
+        <span class="lang-badge">EN</span>
+        <p class="service-desc-en">Design of comprehensive visual systems, typographic direction, color palettes, and memorable graphic applications.</p>
       </article>
 
       <article class="service-item">
-        <h4>Brand Identity & Strategy</h4>
-        <p>
-          Crafting comprehensive visual systems, distinct typographic hierarchies, color palettes, and brand guidelines that give independent brands an authentic and memorable presence.
-        </p>
+        <h4>Diseño Editorial / Editorial & Print Design</h4>
+        <span class="lang-badge">ES</span>
+        <p class="service-desc-es">Publicaciones impresas, libros de artista, catálogos y papelería corporativa con especial atención a la maquetación y los acabados táctiles.</p>
+        <span class="lang-badge">EN</span>
+        <p class="service-desc-en">Print publications, artist books, catalogues, and corporate stationery with special attention to layout and tactile finishes.</p>
       </article>
 
       <article class="service-item">
-        <h4>Packaging & Tactile Experience</h4>
-        <p>
-          Designing physical packaging, unboxing experiences, material exploration, and production specifications with a focus on tactile detailing and fine finishes.
-        </p>
+        <h4>Packaging & Objetos / Packaging Experience</h4>
+        <span class="lang-badge">ES</span>
+        <p class="service-desc-es">Desarrollo de packaging experiencial para moda, joyería y productos de diseño, cuidando materiales y experiencia de apertura.</p>
+        <span class="lang-badge">EN</span>
+        <p class="service-desc-en">Experiential packaging development for fashion, jewelry, and design products, focusing on materials and the unboxing experience.</p>
       </article>
 
       <article class="service-item">
-        <h4>Editorial & Print Design</h4>
-        <p>
-          High-end publications, lookbooks, exhibition graphics, art books, and brand collateral that celebrate the craftsmanship of print culture and typography.
-        </p>
+        <h4>Dirección de Arte y Foto / Art Direction & Photography</h4>
+        <span class="lang-badge">ES</span>
+        <p class="service-desc-es">Composición de bodegones, sesiones de producto y dirección visual para lookbooks y campañas.</p>
+        <span class="lang-badge">EN</span>
+        <p class="service-desc-en">Still life set styling, product photo sessions, and visual direction for lookbooks and campaigns.</p>
       </article>
 
       <article class="service-item">
-        <h4>Digital & Interactive Presence</h4>
-        <p>
-          Translating tactile studio sensibilities into modern web experiences, portfolio architectures, and curated digital media assets.
-        </p>
+        <h4>Presencia Digital / Digital Presence</h4>
+        <span class="lang-badge">ES</span>
+        <p class="service-desc-es">Traducción de identidades analógicas al medio web: portafolios interactivos y piezas gráficas adaptadas a plataformas digitales[cite: 1].</p>
+        <span class="lang-badge">EN</span>
+        <p class="service-desc-en">Translating physical studio aesthetics into modern web layouts, interactive portfolios, and curated digital assets[cite: 1].</p>
       </article>
+
     </div>
   </section>
 
