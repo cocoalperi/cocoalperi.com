@@ -22,6 +22,11 @@
       width: 100%;
     }
 
+    /* Subrayado activo en el menú para la página actual */
+    .main-nav a.active::after {
+      right: 0;
+    }
+
     /* Títulos en azul con la misma jerarquía que About */
     .section-title {
       color: #0055ff;
@@ -88,7 +93,7 @@
       color: #0055ff;
     }
 
-    /* Lista estilo Social de la referencia */
+    /* Lista estilo Social */
     .social-list {
       list-style: none;
       padding: 0;
@@ -111,7 +116,7 @@
       color: #0055ff;
     }
 
-    /* Textos bilingües de la columna Inquiries / Solicitudes */
+    /* Textos bilingües de la columna Inquiries */
     .lang-es {
       color: #111111;
       font-weight: 400;
@@ -128,7 +133,7 @@
       font-style: italic;
     }
 
-    /* Sección inferior: Datos adicionales o disponibilidad */
+    /* Sección inferior: Notas de disponibilidad y dossier */
     .contact-footer-note {
       border-top: 1px solid var(--line);
       padding-top: 48px;
@@ -159,7 +164,7 @@
       font-style: italic;
     }
 
-    /* Adaptación para móvil */
+    /* Adaptación móvil */
     @media (max-width: 650px) {
       .contact-page {
         padding-top: 85px;
@@ -182,7 +187,7 @@
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- HEADER Y MENÚ DE NAVEGACIÓN -->
   <header class="site-header">
     <a class="logo" href="index.html#home" aria-label="COCO ALPERI home">
       COCO ALPERI
@@ -192,10 +197,11 @@
       <a href="index.html#home">Home</a>
       <a href="index.html#work">Work</a>
       <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="active">Contact</a>
     </nav>
   </header>
 
+  <!-- CONTENIDO PRINCIPAL -->
   <div class="contact-page">
     
     <main class="contact-grid">
@@ -232,14 +238,14 @@
         </ul>
       </section>
 
-      <!-- Columna 3: Inquiries & Prácticas -->
+      <!-- Columna 3: Inquiries / Solicitudes -->
       <section class="contact-col">
         <h2 class="section-title">Inquiries</h2>
 
         <div class="contact-block">
           <span class="lang-badge">ES</span>
           <p class="lang-es">
-            Abierta a oportunidades de prácticas en estudios de diseño gráfico, marcas de moda, agencias de comunicación y proyectos editoriales independientes.
+            Abierta a oportunidades de prácticas en estudios de diseño gráfico, firmas de moda, agencias de comunicación y proyectos editoriales independientes.
           </p>
           <span class="lang-badge">EN</span>
           <p class="lang-en">
