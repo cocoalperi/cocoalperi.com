@@ -12,19 +12,16 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* Eliminamos cualquier padding del body para que mande el contenedor .about-page */
     body {
       padding: 0;
       margin: 0;
     }
 
-    /* Contenedor principal: en ordenador da margen de sobra para el header fijo */
     .about-page {
       padding: 170px var(--pad) 80px;
       width: 100%;
     }
 
-    /* Títulos de sección en azul */
     .section-title {
       color: #0055ff;
       font-size: 13px;
@@ -34,7 +31,6 @@
       letter-spacing: 0.04em;
     }
 
-    /* Etiquetas de idioma */
     .lang-badge {
       display: inline-block;
       font-size: 10px;
@@ -45,7 +41,6 @@
       text-transform: uppercase;
     }
 
-    /* Grilla superior: 3 columnas */
     .top-grid {
       display: grid;
       grid-template-columns: 2fr 1.2fr 0.8fr;
@@ -53,7 +48,6 @@
       margin-bottom: 80px;
     }
 
-    /* Bloques de About */
     .about-block {
       margin-bottom: 24px;
     }
@@ -77,7 +71,28 @@
       font-style: italic;
     }
 
-    /* Miembros / Fam */
+    /* Foto de presentación */
+    .profile-photo {
+      width: 100%;
+      max-width: 240px;
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      margin-bottom: 24px;
+      background-color: var(--line, #e5e5e5);
+    }
+
+    .profile-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: opacity 0.25s ease;
+    }
+
+    .profile-photo img:hover {
+      opacity: 0.9;
+    }
+
     .member-group {
       margin-bottom: 20px;
     }
@@ -105,7 +120,6 @@
       display: block;
     }
 
-    /* Address */
     .meta-text {
       font-weight: 500;
       color: #111111;
@@ -119,7 +133,6 @@
       margin-top: 4px;
     }
 
-    /* Sección de Servicios */
     .services-section {
       border-top: 1px solid var(--line);
       padding-top: 56px;
@@ -149,14 +162,17 @@
       font-style: italic;
     }
 
-    /* RESPONSIVE: En móviles ajustamos para que no quede demasiado separado */
     @media (max-width: 650px) {
       .about-page {
-        padding-top: 85px; /* Altura justa para salvar el menú en móvil sin dejar hueco */
+        padding-top: 85px;
         padding-bottom: 48px;
       }
       .section-title {
         margin-bottom: 16px;
+      }
+      .profile-photo {
+        max-width: 190px;
+        margin-bottom: 20px;
       }
       .top-grid {
         grid-template-columns: 1fr;
@@ -172,7 +188,6 @@
 </head>
 <body>
 
-  <!-- Header estándar de style.css con enlace activo -->
   <header class="site-header">
     <a class="logo" href="index.html#home" aria-label="COCO ALPERI home">
       COCO ALPERI
@@ -186,7 +201,6 @@
     </nav>
   </header>
 
-  <!-- Contenedor con espaciado calibrado para ordenador y móvil -->
   <div class="about-page">
     
     <main class="top-grid">
@@ -229,9 +243,13 @@
         </div>
       </section>
 
-      <!-- Fam -->
+      <!-- Fam con foto de presentación -->
       <section class="fam-col">
         <h2 class="section-title">Fam</h2>
+
+        <div class="profile-photo">
+          <img src="assets/tu-foto.jpg" alt="Covadonga Alperi">
+        </div>
 
         <div class="member-group">
           <span class="member-name">Covadonga Alperi</span>
