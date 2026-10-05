@@ -1,1 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COCO ALPERI — Contact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Estilos globales compartidos -->
+  <link rel="stylesheet" href="style.css">
 
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    .contact-page {
+      padding: 170px var(--pad) 80px;
+      width: 100%;
+    }
+
+    /* Títulos en azul con la misma jerarquía que About */
+    .section-title {
+      color: #0055ff;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* Etiquetas de idioma */
+    .lang-badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      color: #888888;
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+
+    /* Retícula principal de 3 columnas (Address / Social / Inquiries) */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1.6fr;
+      gap: clamp(28px, 4vw, 56px);
+      margin-bottom: 80px;
+    }
+
+    .contact-col {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-block {
+      margin-bottom: 24px;
+    }
+    .contact-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .meta-label {
+      display: block;
+      font-weight: 500;
+      color: #777777;
+      font-size: 13px;
+      margin-bottom: 2px;
+    }
+
+    .meta-value {
+      font-weight: 500;
+      color: #111111;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .meta-value a {
+      color: #111111;
+      text-decoration: underline;
+      transition: color 0.2s ease;
+    }
+
+    .meta-value a:hover {
+      color: #0055ff;
+    }
+
+    /* Lista estilo Social de la referencia */
+    .social-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .social-list li {
+      margin-bottom: 6px;
+    }
+
+    .social-list a {
+      font-size: 14px;
+      color: #111111;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .social-list a:hover {
+      color: #0055ff;
+    }
+
+    /* Textos bilingües de la columna Inquiries / Solicitudes */
+    .lang-es {
+      color: #111111;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.55;
+      margin-bottom: 10px;
+    }
+
+    .lang-en {
+      color: #666666;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 1.55;
+      font-style: italic;
+    }
+
+    /* Sección inferior: Datos adicionales o disponibilidad */
+    .contact-footer-note {
+      border-top: 1px solid var(--line);
+      padding-top: 48px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px clamp(24px, 4vw, 64px);
+    }
+
+    .note-item h4 {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: #777777;
+      margin-bottom: 6px;
+    }
+
+    .note-desc-es {
+      font-size: 13px;
+      line-height: 1.5;
+      color: #111111;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+
+    .note-desc-en {
+      font-size: 12.5px;
+      line-height: 1.5;
+      color: #666666;
+      font-style: italic;
+    }
+
+    /* Adaptación para móvil */
+    @media (max-width: 650px) {
+      .contact-page {
+        padding-top: 85px;
+        padding-bottom: 48px;
+      }
+      .section-title {
+        margin-bottom: 16px;
+      }
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        margin-bottom: 48px;
+      }
+      .contact-footer-note {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <a class="logo" href="index.html#home" aria-label="COCO ALPERI home">
+      COCO ALPERI
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#work">Work</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="contact-page">
+    
+    <main class="contact-grid">
+
+      <!-- Columna 1: Address & Location -->
+      <section class="contact-col">
+        <h2 class="section-title">Address</h2>
+        
+        <div class="contact-block">
+          <span class="meta-label">Ubicación / Base</span>
+          <p class="meta-value">
+            Oviedo, Asturias<br>
+            España / Spain
+          </p>
+        </div>
+
+        <div class="contact-block">
+          <span class="meta-label">Movilidad / Availability</span>
+          <p class="meta-value">
+            Disponible para trabajo presencial, híbrido o remoto.
+          </p>
+        </div>
+      </section>
+
+      <!-- Columna 2: Social & Redes -->
+      <section class="contact-col">
+        <h2 class="section-title">Social</h2>
+        <ul class="social-list">
+          <li><a href="mailto:kvadonga@gmail.com">Mail</a></li>
+          <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.hellotempora.com" target="_blank" rel="noopener">Témpora Jewelry</a></li>
+          <li><a href="https://behance.net" target="_blank" rel="noopener">Behance</a></li>
+        </ul>
+      </section>
+
+      <!-- Columna 3: Inquiries & Prácticas -->
+      <section class="contact-col">
+        <h2 class="section-title">Inquiries</h2>
+
+        <div class="contact-block">
+          <span class="lang-badge">ES</span>
+          <p class="lang-es">
+            Abierta a oportunidades de prácticas en estudios de diseño gráfico, marcas de moda, agencias de comunicación y proyectos editoriales independientes.
+          </p>
+          <span class="lang-badge">EN</span>
+          <p class="lang-en">
+            Open to internship opportunities across graphic design studios, fashion labels, communication agencies, and independent editorial projects.
+          </p>
+        </div>
+
+        <div class="contact-block">
+          <span class="meta-label">Email directo</span>
+          <p class="meta-value">
+            <a href="mailto:kvadonga@gmail.com">kvadonga@gmail.com</a>
+          </p>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Fila inferior: Portfolio PDF / CV -->
+    <section class="contact-footer-note">
+      <div class="note-item">
+        <h4>Portfolio & CV Completo</h4>
+        <span class="lang-badge">ES</span>
+        <p class="note-desc-es">
+          Dossier completo de proyectos en formato PDF y currículum vitae disponibles bajo solicitud directa por correo electrónico.
+        </p>
+        <span class="lang-badge">EN</span>
+        <p class="note-desc-en">
+          Full PDF portfolio and detailed curriculum vitae available upon direct request via email.
+        </p>
+      </div>
+
+      <div class="note-item">
+        <h4>Colaboraciones / Collaborations</h4>
+        <span class="lang-badge">ES</span>
+        <p class="note-desc-es">
+          Siempre interesada en participar en proyectos colaborativos de moda, diseño editorial y dirección de arte.
+        </p>
+        <span class="lang-badge">EN</span>
+        <p class="note-desc-en">
+          Always open to joining collaborative projects focused on fashion, editorial publication, and art direction.
+        </p>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>
