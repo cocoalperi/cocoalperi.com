@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>COCOALPERI — Creative Studio</title>
+  <title>COCO ALPERI — About</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -12,51 +12,9 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
+    /* El cuerpo usa el mismo padding y fondo de style.css, con margen superior para el header fixed */
     body {
-      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background-color: #fafafa;
-      color: #111111;
-      line-height: 1.45;
-      font-size: 13.5px;
-      padding: 32px 48px 64px;
-    }
-
-    /* HEADER: logo a la izquierda y navegación a la derecha */
-    .site-header {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-bottom: 24px;
-      margin-bottom: 48px;
-    }
-
-    
-
-    .site-header .main-nav {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-      margin-left: auto;
-    }
-
-    .site-header .main-nav a {
-      font-size: 13.5px;
-      color: #111111;
-      text-decoration: none;
-      font-weight: 500;
-      transition: opacity 0.2s ease;
-      white-space: nowrap;
-    }
-
-    .site-header .main-nav a:hover {
-      opacity: 0.6;
+      padding: 130px var(--pad) 80px;
     }
 
     /* Títulos en azul */
@@ -64,7 +22,7 @@
       color: #0055ff;
       font-size: 13px;
       font-weight: 600;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
       text-transform: uppercase;
       letter-spacing: 0.04em;
     }
@@ -84,7 +42,7 @@
     .top-grid {
       display: grid;
       grid-template-columns: 2fr 1.2fr 0.8fr;
-      gap: 56px;
+      gap: clamp(24px, 4vw, 56px);
       margin-bottom: 72px;
     }
 
@@ -98,10 +56,10 @@
 
     .lang-es {
       color: #111111;
-      font-weight: 500;
+      font-weight: 400;
       font-size: 14px;
       line-height: 1.55;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .lang-en {
@@ -120,14 +78,14 @@
       margin-bottom: 0;
     }
     .member-name {
-      font-weight: 700;
+      font-weight: 500;
       color: #777777;
       font-size: 13px;
       display: block;
       margin-bottom: 2px;
     }
     .member-role {
-      font-weight: 600;
+      font-weight: 500;
       color: #111111;
       font-size: 13.5px;
       display: block;
@@ -142,7 +100,7 @@
 
     /* Address */
     .meta-text {
-      font-weight: 600;
+      font-weight: 500;
       color: #111111;
       line-height: 1.5;
       font-size: 13.5px;
@@ -156,17 +114,17 @@
 
     /* Sección de Servicios */
     .services-section {
-      border-top: 1px solid #e5e5e5;
-      padding-top: 40px;
+      border-top: 1px solid var(--line);
+      padding-top: 48px;
     }
     .services-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 40px 64px;
+      gap: 40px clamp(24px, 4vw, 64px);
     }
     .service-item h4 {
       font-size: 13.5px;
-      font-weight: 700;
+      font-weight: 500;
       color: #777777;
       margin-bottom: 6px;
     }
@@ -174,7 +132,7 @@
       font-size: 13px;
       line-height: 1.5;
       color: #111111;
-      font-weight: 500;
+      font-weight: 400;
       margin-bottom: 8px;
     }
     .service-desc-en {
@@ -184,39 +142,16 @@
       font-style: italic;
     }
 
-    /* AJUSTES RESPONSIVE PARA MÓVIL */
+    /* Responsivo para móviles y tablets */
     @media (max-width: 768px) {
       body {
-        padding: 24px 20px 48px;
+        padding-top: 110px;
       }
-
-      .site-header {
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 36px;
-      }
-
-      .site-header .main-nav {
-        margin-left: auto;
-        gap: 12px;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-      }
-
-      .site-header .main-nav a {
-        font-size: 12px;
-      }
-
       .top-grid {
         grid-template-columns: 1fr;
         gap: 36px;
         margin-bottom: 48px;
-        clear: both;
       }
-
       .services-grid {
         grid-template-columns: 1fr;
         gap: 28px;
@@ -226,7 +161,7 @@
 </head>
 <body>
 
-  <!-- Header con navegación -->
+  <!-- Header (utiliza exactamente las clases y comportamiento fixed de style.css) -->
   <header class="site-header">
     <a class="logo" href="index.html#home" aria-label="COCO ALPERI home">
       COCO ALPERI
@@ -240,7 +175,7 @@
     </nav>
   </header>
 
-  <!-- Bloque superior: About / Fam / Address -->
+  <!-- Contenido principal -->
   <main class="top-grid">
 
     <!-- About -->
@@ -319,7 +254,7 @@
 
   </main>
 
-  <!-- Bloque inferior: Services -->
+  <!-- Sección Servicios -->
   <section class="services-section">
     <h2 class="section-title">Services</h2>
     <div class="services-grid">
@@ -367,16 +302,13 @@
       <article class="service-item">
         <h4>Presencia Digital / Digital Presence</h4>
         <span class="lang-badge">ES</span>
-        <p class="service-desc-es">Traducción de identidades analógicas al medio web: portafolios interactivos y piezas gráficas adaptadas a plataformas digitales.</p>
+        <p class="service-desc-es">Traducción de identidades analógicas al medio web: portafolios interactivos y piezas gráficas adaptadas a plataformas digitales[cite: 1].</p>
         <span class="lang-badge">EN</span>
-        <p class="service-desc-en">Translating physical studio aesthetics into modern web layouts, interactive portfolios, and curated digital assets.</p>
+        <p class="service-desc-en">Translating physical studio aesthetics into modern web layouts, interactive portfolios, and curated digital assets[cite: 1].</p>
       </article>
 
     </div>
   </section>
-
-</body>
-</html>
 
 </body>
 </html>
