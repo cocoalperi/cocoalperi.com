@@ -22,7 +22,6 @@
   </div>
 
   <header class="site-header">
-
     <a class="logo" href="#home" aria-label="COCO ALPERI home">
       COCO ALPERI
     </a>
@@ -33,168 +32,108 @@
       <a href="about.html">About</a>
       <a href="#contact">Contact</a>
     </nav>
-
   </header>
 
   <main>
 
     <!-- HOME -->
     <section id="home" class="page page-home">
-
       <div class="hero-video">
-
-        <video
-            controls
-     loop
-  playsinline
-          class="video-portada"
-        >
-       <source src="assets/Comp-1.mp4" type="video/mp4">
+        <video controls loop playsinline class="video-portada">
+          <source src="assets/Comp-1.mp4" type="video/mp4">
         </video>
-
       </div>
-
     </section>
-
 
     <!-- WORK -->
     <section id="work" class="page page-work">
 
       <div class="section-heading">
-
         <h1>Work</h1>
 
+        <!-- Filtros con data-filter normalizados -->
         <div class="filters" aria-label="Filter projects">
-
           <button class="filter active" data-filter="all">
             All
           </button>
-
-          <button class="filter" data-filter="Fashion editorial">
+          <button class="filter" data-filter="Editorial">
             Editorial
           </button>
-
           <button class="filter" data-filter="Packaging">
             Packaging
           </button>
-
-          <button class="filter" data-filter="editorial">
+          <button class="filter" data-filter="Photo editorial">
             Photo editorial
           </button>
-
+          <button class="filter" data-filter="Fashion editorial">
+            Fashion editorial
+          </button>
           <button class="filter" data-filter="Corporate Identity">
             Corporate identity
           </button>
-           <button class="filter" data-filter="Corporate Identity">
-            Fashion editorial
-          </button>
-
         </div>
-
       </div>
-
 
       <div class="project-list">
 
-        <article class="project" data-category="Editorial">
-
-         <a href="projects/project-one.html" class="project-image">
-
-    <img
-     src="../assets/portadaCertamen.png"
-      alt="Guardas libro"
-    >
-
-  </a>
-
+        <!-- Proyecto 1: Editorial -->
+        <article class="project" data-category="Editorial" id="project-editorial">
+          <a href="projects/project-one.html" class="project-image">
+            <img src="../assets/portadaCertamen.png" alt="Guardas libro">
+          </a>
           <div class="project-info">
-
             <h2>XIV Certamen de Cuentos y Dibujos sobre Medio Ambiente. Gijón 2025</h2>
-
             <span>2024</span>
-
             <span>Editorial</span>
-
           </div>
-
         </article>
 
+        <!-- Proyecto 2: Packaging -->
+        <article class="project" data-category="Packaging" id="project-packaging">
+          <a href="projects/project-two.html" class="project-image">
+            <img src="../assets/portada1.png" alt="Vinitor">
+          </a>
+          <div class="project-info">
+            <h2>Vinitor</h2>
+            <span>2025</span>
+            <span>Packaging</span>
+          </div>
+        </article>
 
-        <article class="project" data-category="Packaging">
-
-  <a href="projects/project-two.html" class="project-image">
-
-    <img
-     src="../assets/portada1.png"
-      alt="Vinitor"
-    >
-
-  </a>
-
-  <div class="project-info">
-
-   <h2>Vinitor</h2>
-
-    <span>2025</span>
-
-    <span>Packaging</span>
-
-  </div>
-
-</article>
-
-        <article class="project" data-category="Photo editorial">
-
+        <!-- Proyecto 3: Photo editorial -->
+        <article class="project" data-category="Photo editorial" id="project-photo-editorial">
           <a href="projects/project-three.html" class="project-image">
-            
-    <img
-     src="../assets/portada3.png"
-      alt="Portada Dazed"
-    >
-
+            <img src="../assets/portada3.png" alt="Portada Dazed">
           </a>
-
           <div class="project-info">
-
             <h2>Editorial fotográfica: Dazed</h2>
-
             <span>2024</span>
-
             <span>Photo editorial</span>
-
           </div>
-
         </article>
 
-
-        <article class="project" data-category="Photo editorial">
-
+        <!-- Proyecto 4: Fashion editorial -->
+        <article class="project" data-category="Fashion editorial" id="project-fashion-editorial">
           <a href="projects/project-four.html" class="project-image">
-   <img
-     src="../assets/fotoBannerClodettes.png"
-      alt="Portada Clodettes"
-    >
+            <img src="../assets/fotoBannerClodettes.png" alt="Portada Clodettes">
           </a>
-
           <div class="project-info">
-
             <h2>Editorial de moda - Les Clodettes</h2>
-
             <span>2026</span>
-
             <span>Fashion editorial</span>
-
           </div>
-
         </article>
 
       </div>
 
     </section>
 
-
   </main>
 
+  <script src="script.js"></script>
+
+</body>
+</html>
 
   <script src="script.js"></script>
 
