@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>COCOALPERI — Creative</title>
+  <title>COCOALPERI — Creative Studio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   
-  <!-- Estilos globales compartidos con tu web principal -->
+  <!-- Enlace a tu hoja de estilos general -->
   <link rel="stylesheet" href="style.css">
 
   <style>
@@ -24,16 +24,17 @@
       color: #111111;
       line-height: 1.45;
       font-size: 13.5px;
-      padding: 48px;
+      padding: 32px 48px 64px;
     }
 
-    /* Estilos del Header por si no los cargase style.css */
+    /* HEADER: logo a la izquierda y navegación a la derecha */
     .site-header {
+      width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-bottom: 48px;
-      margin-bottom: 24px;
+      padding-bottom: 24px;
+      margin-bottom: 48px;
     }
 
     .site-header .logo {
@@ -42,11 +43,14 @@
       color: #111111;
       text-decoration: none;
       letter-spacing: 0.05em;
+      flex-shrink: 0;
     }
 
     .site-header .main-nav {
       display: flex;
-      gap: 24px;
+      gap: 20px;
+      align-items: center;
+      margin-left: auto;
     }
 
     .site-header .main-nav a {
@@ -55,6 +59,7 @@
       text-decoration: none;
       font-weight: 500;
       transition: opacity 0.2s ease;
+      white-space: nowrap;
     }
 
     .site-header .main-nav a:hover {
@@ -186,31 +191,49 @@
       font-style: italic;
     }
 
-    @media (max-width: 900px) {
+    /* AJUSTES RESPONSIVE PARA MÓVIL */
+    @media (max-width: 768px) {
       body {
-        padding: 24px;
+        padding: 24px 20px 48px;
       }
+
       .site-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-        padding-bottom: 32px;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 36px;
       }
+
+      .site-header .main-nav {
+        margin-left: auto;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .site-header .main-nav a {
+        font-size: 12px;
+      }
+
       .top-grid {
         grid-template-columns: 1fr;
         gap: 36px;
         margin-bottom: 48px;
+        clear: both;
       }
+
       .services-grid {
         grid-template-columns: 1fr;
-        gap: 32px;
+        gap: 28px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- AQUÍ VA EL HEADER (Justo al inicio de <body>) -->
+  <!-- Header con navegación -->
   <header class="site-header">
     <a class="logo" href="index.html#home" aria-label="COCO ALPERI home">
       COCO ALPERI
@@ -224,7 +247,7 @@
     </nav>
   </header>
 
-  <!-- Parte Superior -->
+  <!-- Bloque superior: About / Fam / Address -->
   <main class="top-grid">
 
     <!-- About -->
@@ -294,7 +317,7 @@
       </div>
     </section>
 
-    <!-- Address (Social eliminada) -->
+    <!-- Address -->
     <section class="info-col" id="address">
       <h2 class="section-title">Address</h2>
       <p class="meta-text">Oviedo / Asturias<br>España</p>
@@ -303,7 +326,7 @@
 
   </main>
 
-  <!-- Parte Inferior: Services -->
+  <!-- Bloque inferior: Services -->
   <section class="services-section">
     <h2 class="section-title">Services</h2>
     <div class="services-grid">
@@ -351,13 +374,16 @@
       <article class="service-item">
         <h4>Presencia Digital / Digital Presence</h4>
         <span class="lang-badge">ES</span>
-        <p class="service-desc-es">Traducción de identidades analógicas al medio web: portafolios interactivos y piezas gráficas adaptadas a plataformas digitales[cite: 1].</p>
+        <p class="service-desc-es">Traducción de identidades analógicas al medio web: portafolios interactivos y piezas gráficas adaptadas a plataformas digitales.</p>
         <span class="lang-badge">EN</span>
-        <p class="service-desc-en">Translating physical studio aesthetics into modern web layouts, interactive portfolios, and curated digital assets[cite: 1].</p>
+        <p class="service-desc-en">Translating physical studio aesthetics into modern web layouts, interactive portfolios, and curated digital assets.</p>
       </article>
 
     </div>
   </section>
+
+</body>
+</html>
 
 </body>
 </html>
