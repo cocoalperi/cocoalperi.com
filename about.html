@@ -41,10 +41,11 @@
       text-transform: uppercase;
     }
 
+    /* Grilla ajustada: Columna 1 (Profile) más estrecha, Columna 2 (About) más ancha */
     .top-grid {
       display: grid;
-      grid-template-columns: 2fr 1.2fr 0.8fr;
-      gap: clamp(28px, 4vw, 56px);
+      grid-template-columns: 1fr 1.8fr;
+      gap: clamp(28px, 5vw, 64px);
       margin-bottom: 80px;
     }
 
@@ -120,27 +121,6 @@
       display: block;
     }
 
-    .meta-text {
-      font-weight: 500;
-      color: #111111;
-      line-height: 1.5;
-      font-size: 13.5px;
-    }
-    .meta-text a {
-      color: #111111;
-      text-decoration: underline;
-    }
-    .meta-text a:hover {
-      color: #0055ff;
-    }
-    .meta-text-en {
-      color: #666666;
-      font-size: 12.5px;
-      font-style: italic;
-      margin-top: 6px;
-      line-height: 1.4;
-    }
-
     .services-section {
       border-top: 1px solid var(--line);
       padding-top: 56px;
@@ -205,7 +185,7 @@
     <nav class="main-nav" aria-label="Main navigation">
       <a href="index.html#home">Home</a>
       <a href="index.html#work">Work</a>
-      <a href="about.html">About</a>
+      <a href="about.html" class="active">About</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
@@ -213,7 +193,8 @@
   <div class="about-page">
     
     <main class="top-grid">
-     <!-- Profile -->
+
+      <!-- 1. PROFILE (Columna Izquierda) -->
       <section class="fam-col">
         <h2 class="section-title">Profile</h2>
 
@@ -245,7 +226,8 @@
           <span class="member-role-en">Available for design & fashion internships</span>
         </div>
       </section>
-      <!-- About -->
+
+      <!-- 2. ABOUT (Columna Derecha) -->
       <section class="about-col">
         <h2 class="section-title">About</h2>
 
@@ -256,7 +238,9 @@
           </p>
           <span class="lang-badge">EN</span>
           <p class="lang-en">
-              My name is Covadonga Alperi, and I am a graphic designer and visual artist based in Asturias, although I currently live in Madrid. I have a degree in Print Graphics from the Oviedo School of Art and am completing my bachelor’s degree in Graphic Design at ESAPA, the Higher School of Art of the Principality of Asturias. My work focuses on fashion communication, brand identity, packaging, and art direction.
+            My name is Covadonga Alperi, and I am a graphic designer and visual artist based in Asturias, although I currently live in Madrid. I have a degree in Print Graphics from the Oviedo School of Art and am completing my bachelor’s degree in Graphic Design at ESAPA, the Higher School of Art of the Principality of Asturias. My work focuses on fashion communication, brand identity, packaging, and art direction.
+          </p>
+        </div>
 
         <div class="about-block">
           <span class="lang-badge">ES</span>
@@ -265,7 +249,7 @@
           </p>
           <span class="lang-badge">EN</span>
           <p class="lang-en">
-            Alongside my independent design work, I am the founder and creative director of Témpora (<a href="https://www.hellotempora.com" target="_blank" rel="noopener" style="text-decoration: underline;">hellotempora.com</a>), a self-initiated handcrafted resin and others materials jewelry brand inspired by the seasons. Running this project has allowed me to oversee every stage, from core concept and product art direction to packaging and visual communication.
+            Alongside my independent design work, I am the founder and creative director of Témpora (<a href="https://www.hellotempora.com" target="_blank" rel="noopener" style="text-decoration: underline;">hellotempora.com</a>), a self-initiated handcrafted resin and other materials jewelry brand inspired by the seasons. Running this project has allowed me to oversee every stage, from core concept and product art direction to packaging and visual communication.
           </p>
         </div>
 
@@ -283,6 +267,7 @@
 
     </main>
 
+  </div>
 
 </body>
 </html>
