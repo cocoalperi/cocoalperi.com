@@ -149,14 +149,16 @@ button {
 /* =========================================================
    HOME / VIDEO
    ========================================================= */
+
 .video-portada {
-  width: 100%;             /* Se adapta al ancho del contenedor */
-  max-width: 100%;         /* Evita que se salga por la derecha en móviles */
-  height: auto;            /* Mantiene la proporción original sin deformarse */
-  display: block;          /* Elimina espacios fantasma inline */
-  box-sizing: border-box;  /* Incluye rellenos y bordes en el ancho total */
-  margin-bottom: 2rem;     /* Distancia con la foto de abajo (ajusta según necesites) */
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 2rem;
 }
+
 .page-home {
   min-height: 100svh;
   min-height: 100dvh;
@@ -277,41 +279,45 @@ h1 {
 }
 
 /* =========================================================
-   PROJECTS
+   PROJECTS (Ajustado para tamaño armónico en escritorio)
    ========================================================= */
 
 .project {
   border-bottom: 1px solid var(--line);
   padding: 24px 0 28px;
+  scroll-margin-top: 100px; /* Evita que el header tape el proyecto al hacer scroll */
 }
 
 .project-image {
   display: block;
   background: #e4e1da;
   color: #8b8881;
-  /* Control de tamaño en ordenador: */
-  max-width: 900px; /* Ajusta este valor si lo quieres aún más contenido (ej. 750px u 800px) */
-  margin: 0 auto;   /* Centra la imagen en pantallas grandes */
+  max-width: 820px; /* Ancho máximo en pantallas grandes */
+  margin: 0 auto;   /* Centra la imagen */
 }
 
 .project-image img {
   width: 100%;
   height: auto;
-  max-height: 70vh; /* Evita que la foto sea más alta que la ventana del navegador */
+  max-height: 70vh; /* Evita que la foto sea más alta que la pantalla */
   object-fit: contain;
   display: block;
 }
 
-/* Para que la línea de texto descriptivo inferior acompañe el ancho de la imagen */
+.project-image:hover {
+  opacity: .8;
+}
+
 .project-info {
   display: grid;
   grid-template-columns: 1fr auto auto;
   gap: 25px;
   align-items: baseline;
   padding-top: 14px;
-  max-width: 900px; /* Mismo ancho que la imagen */
+  max-width: 820px; /* Alineado al mismo ancho que la imagen */
   margin: 0 auto;
 }
+
 .project-info h2 {
   margin: 0;
   font-size: 16px;
@@ -590,10 +596,6 @@ h1 {
   .project-navigation {
     font-size: 12px;
   }
-
-  /* =========================================================
-     TWO IMAGES SIDE BY SIDE
-     ========================================================= */
 
   .project-image-large {
     width: 100%;
