@@ -40,7 +40,7 @@
       text-transform: uppercase;
     }
 
-    /* Cuadrícula fija: Columna izquierda (About) 280px, Columna derecha (Profile) el resto */
+    /* Columna izquierda (About con foto) 280px, Columna derecha (Profile con textos) el resto */
     .top-grid {
       display: grid;
       grid-template-columns: 280px 1fr;
@@ -121,7 +121,7 @@
       display: block;
     }
 
-    /* En móvil se apilan: primero About (foto), luego Profile */
+    /* En móvil se apilan en 1 sola columna: primero About (foto) y luego Profile */
     @media (max-width: 768px) {
       .about-page {
         padding-top: 85px;
