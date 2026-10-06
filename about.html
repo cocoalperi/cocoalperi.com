@@ -1,151 +1,98 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="COCO ALPERI — Portfolio">
-  <title>COCO ALPERI — Portfolio</title>
-
-  <!-- Favicons -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <link rel="manifest" href="site.webmanifest">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COCO ALPERI — About</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="style.css">
-</head>
 
-<body>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
 
-  <!-- Intro / logo animation -->
-  <div class="intro" id="intro" aria-label="COCO ALPERI">
-    <div class="intro-logo">COCO ALPERI</div>
-  </div>
+    .about-page {
+      padding: 170px var(--pad) 80px;
+      width: 100%;
+    }
 
-  <header class="site-header">
-    <a class="logo" href="#home" aria-label="COCO ALPERI home">
-      COCO ALPERI
-    </a>
+    .section-title {
+      color: #0055ff;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
 
-    <nav class="main-nav" aria-label="Main navigation">
-      <a href="#home">Home</a>
-      <a href="#work">Work</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+    .lang-badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      color: #888888;
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
 
-  <main>
+    /* Cuadrícula en PC: 360px a la izquierda y el resto a la derecha */
+    .top-grid {
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: clamp(40px, 6vw, 90px);
+      margin-bottom: 80px;
+      align-items: start;
+    }
 
-    <!-- HOME -->
-    <section id="home" class="page page-home">
-      <div class="hero-video">
-        <video 
-          autoplay 
-          muted 
-          loop 
-          playsinline 
-          controls 
-          preload="auto" 
-          class="video-portada"
-        >
-          <source src="assets/Comp-1.mp4" type="video/mp4">
-        </video>
-      </div>
-    </section>
+    /* Control de ancho para que el texto de Profile no quede excesivamente estirado */
+    .profile-right-col {
+      max-width: 620px;
+    }
 
-    <!-- WORK -->
-    <section id="work" class="page page-work">
+    .about-block {
+      margin-bottom: 24px;
+    }
+    .about-block:last-child {
+      margin-bottom: 0;
+    }
 
-      <div class="section-heading">
-        <h1>Work</h1>
+    .lang-es {
+      color: #111111;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.55;
+      margin-bottom: 10px;
+    }
 
-        <!-- Filtros con data-filter normalizados -->
-        <div class="filters" aria-label="Filter projects">
-          <button class="filter active" data-filter="all">
-            All
-          </button>
-          <button class="filter" data-filter="Editorial">
-            Editorial
-          </button>
-          <button class="filter" data-filter="Packaging">
-            Packaging
-          </button>
-          <button class="filter" data-filter="Photo editorial">
-            Photo editorial
-          </button>
-          <button class="filter" data-filter="Fashion editorial">
-            Fashion editorial
-          </button>
-          <button class="filter" data-filter="Corporate Identity">
-            Corporate identity
-          </button>
-        </div>
-      </div>
+    .lang-en {
+      color: #666666;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 1.55;
+      font-style: italic;
+    }
 
-      <div class="project-list">
+    /* Foto de presentación */
+    .profile-photo {
+      width: 100%;
+      max-width: 320px;
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      margin-bottom: 24px;
+      background-color: var(--line, #e5e5e5);
+    }
 
-        <!-- Proyecto 1: Editorial -->
-        <article class="project" data-category="Editorial" id="project-editorial">
-          <a href="projects/project-one.html" class="project-image">
-            <img src="../assets/portadaCertamen.png" alt="Guardas libro">
-          </a>
-          <div class="project-info">
-            <h2>XIV Certamen de Cuentos y Dibujos sobre Medio Ambiente. Gijón 2025</h2>
-            <span>2024</span>
-            <span>Editorial</span>
-          </div>
-        </article>
+    .profile-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: opacity 0.25s ease;
+    }
 
-        <!-- Proyecto 2: Packaging -->
-        <article class="project" data-category="Packaging" id="project-packaging">
-          <a href="projects/project-two.html" class="project-image">
-            <img src="../assets/portada1.png" alt="Vinitor">
-          </a>
-          <div class="project-info">
-            <h2>Vinitor</h2>
-            <span>2025</span>
-            <span>Packaging</span>
-          </div>
-        </article>
-
-        <!-- Proyecto 3: Photo editorial -->
-        <article class="project" data-category="Photo editorial" id="project-photo-editorial">
-          <a href="projects/project-three.html" class="project-image">
-            <img src="../assets/portada3.png" alt="Portada Dazed">
-          </a>
-          <div class="project-info">
-            <h2>Editorial fotográfica: Dazed</h2>
-            <span>2024</span>
-            <span>Photo editorial</span>
-          </div>
-        </article>
-
-        <!-- Proyecto 4: Fashion editorial -->
-        <article class="project" data-category="Fashion editorial" id="project-fashion-editorial">
-          <a href="projects/project-four.html" class="project-image">
-            <img src="../assets/fotoBannerClodettes.png" alt="Portada Clodettes">
-          </a>
-          <div class="project-info">
-            <h2>Editorial de moda - Les Clodettes</h2>
-            <span>2026</span>
-            <span>Fashion editorial</span>
-          </div>
-        </article>
-
-      </div>
-
-    </section>
-
-  </main>
-
-  <script src="script.js"></script>
-
-</body>
-</html>
+    .profile-photo img:hover {
