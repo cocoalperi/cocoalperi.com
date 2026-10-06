@@ -52,6 +52,7 @@
           muted 
           loop 
           playsinline 
+          webkit-playsinline
           controls 
           preload="auto" 
           class="video-portada"
@@ -114,6 +115,23 @@
             <span>2025</span>
             <span>Packaging</span>
           </div>
+        </article>
 
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    // Forzar muted y arranque automático en iOS Safari
+    const v = document.getElementById('mainHeroVideo');
+    if (v) {
+      v.muted = true;
+      v.defaultMuted = true;
+      v.play().catch(function() {
+        // En caso de que el iPhone tenga activo el Modo de bajo consumo
+      });
+    }
+  </script>
 </body>
 </html>
