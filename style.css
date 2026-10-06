@@ -176,22 +176,23 @@ button {
 }
 
 /* =========================================================
-   MOBILE VIDEO
+   MOBILE VIDEO & HOME SPACING
    ========================================================= */
 
 @media (max-width: 650px) {
   .page-home {
     width: 100%;
-    min-height: 80svh;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    min-height: auto;
+    height: auto;
+    padding-top: 75px; /* Espacio para no quedar tapado por el header */
+    padding-bottom: 0;
+    display: block;
   }
 
   .hero-video {
     width: 100%;
-    height: 80svh;
+    height: auto;
+    aspect-ratio: 16 / 9; /* Proporción panorámica exacta en móvil */
     overflow: hidden;
   }
 
@@ -201,6 +202,12 @@ button {
     display: block;
     object-fit: cover;
     object-position: center center;
+  }
+
+  /* Distancia limpia y proporcionada con Work en móvil */
+  .page-work {
+    padding-top: 40px !important;
+    min-height: auto;
   }
 }
 
@@ -601,6 +608,15 @@ h1 {
     margin-left: auto;
     margin-right: auto;
   }
+
+  .project-hero-image img,
+  .project-image-large img,
+  .project-content video {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
 
   .project-hero-image img,
   .project-image-large img,
