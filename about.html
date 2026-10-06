@@ -96,3 +96,158 @@
     }
 
     .profile-photo img:hover {
+      opacity: 0.9;
+    }
+
+    .member-group {
+      margin-bottom: 20px;
+    }
+    .member-group:last-child {
+      margin-bottom: 0;
+    }
+    .member-name {
+      font-weight: 500;
+      color: #777777;
+      font-size: 13px;
+      display: block;
+      margin-bottom: 2px;
+    }
+    .member-role {
+      font-weight: 500;
+      color: #111111;
+      font-size: 13.5px;
+      display: block;
+    }
+    .member-role-en {
+      font-weight: 400;
+      color: #666666;
+      font-size: 12.5px;
+      font-style: italic;
+      display: block;
+    }
+
+    /* Móvil: permanece intacto en 1 sola columna */
+    @media (max-width: 768px) {
+      .about-page {
+        padding-top: 85px;
+        padding-bottom: 48px;
+      }
+      .section-title {
+        margin-bottom: 16px;
+      }
+      .profile-photo {
+        max-width: 190px;
+        margin-bottom: 20px;
+      }
+      .top-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        margin-bottom: 48px;
+      }
+      .profile-right-col {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <a class="logo" href="index.html#home" aria-label="COCO ALPERI home">
+      COCO ALPERI
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#work">Work</a>
+      <a href="about.html" class="active">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="about-page">
+    
+    <main class="top-grid">
+
+      <!-- ======================================================== -->
+      <!-- 1. COLUMNA IZQUIERDA: ABOUT (Foto y datos personales)    -->
+      <!-- ======================================================== -->
+      <section class="about-left-col">
+        <h2 class="section-title">About</h2>
+
+        <div class="profile-photo">
+          <img src="assets/fotoAbout.jpg" alt="Covadonga Alperi">
+        </div>
+
+        <div class="member-group">
+          <span class="member-name">Covadonga Alperi</span>
+          <span class="member-role">Diseñadora Gráfica & Directora de Arte</span>
+          <span class="member-role-en">Graphic Designer & Art Director</span>
+        </div>
+
+        <div class="member-group">
+          <span class="member-name">Témpora Jewelry</span>
+          <span class="member-role">Fundadora & Dirección de Marca</span>
+          <span class="member-role-en">Founder & Brand Director</span>
+        </div>
+
+        <div class="member-group">
+          <span class="member-name">Educación / Education</span>
+          <span class="member-role">Grado en Diseño Gráfico (ESAPA)</span>
+          <span class="member-role-en">CFGS Gráfica Impresa (Escuela de Arte de Oviedo)</span>
+        </div>
+
+        <div class="member-group">
+          <span class="member-name">Disponibilidad / Status</span>
+          <span class="member-role">Disponible para prácticas en estudio o agencia</span>
+          <span class="member-role-en">Available for design & fashion internships</span>
+        </div>
+      </section>
+
+      <!-- ======================================================== -->
+      <!-- 2. COLUMNA DERECHA: PROFILE (Textos explicativos)        -->
+      <!-- ======================================================== -->
+      <section class="profile-right-col">
+        <h2 class="section-title">Profile</h2>
+
+        <div class="about-block">
+          <span class="lang-badge">ES</span>
+          <p class="lang-es">
+            Soy Covadonga Alperi, diseñadora gráfica y creativa visual afincada en Asturias, aunque actualmente residiendo en Madrid. Estoy graduada en Gráfica Impresa en la Escuela de Arte de Oviedo y finalizando el grado en Diseño Gráfico en la ESAPA, Escuela Superior de Arte del Principado de Asturias. Enfoco mi trabajo en la comunicación en moda, la identidad de marca, el packaging y la dirección de arte.
+          </p>
+          <span class="lang-badge">EN</span>
+          <p class="lang-en">
+            My name is Covadonga Alperi, and I am a graphic designer and visual artist based in Asturias, although I currently live in Madrid. I have a degree in Print Graphics from the Oviedo School of Art and am completing my bachelor’s degree in Graphic Design at ESAPA, the Higher School of Art of the Principality of Asturias. My work focuses on fashion communication, brand identity, packaging, and art direction.
+          </p>
+        </div>
+
+        <div class="about-block">
+          <span class="lang-badge">ES</span>
+          <p class="lang-es">
+            De forma paralela a mi labor de diseño independiente, soy fundadora y directora creativa de Témpora (<a href="https://www.hellotempora.com" target="_blank" rel="noopener" style="text-decoration: underline;">hellotempora.com</a>), una marca propia de joyería y bisutería artesanal en resina y demás materiales inspirada en los ciclos estacionales. Desarrollar este proyecto me ha permitido gestionar de forma integral el concepto, la dirección estética de producto, el packaging y la comunicación visual.
+          </p>
+          <span class="lang-badge">EN</span>
+          <p class="lang-en">
+            Alongside my independent design work, I am the founder and creative director of Témpora (<a href="https://www.hellotempora.com" target="_blank" rel="noopener" style="text-decoration: underline;">hellotempora.com</a>), a self-initiated handcrafted resin and other materials jewelry brand inspired by the seasons. Running this project has allowed me to oversee every stage, from core concept and product art direction to packaging and visual communication.
+          </p>
+        </div>
+
+        <div class="about-block">
+          <span class="lang-badge">ES</span>
+          <p class="lang-es">
+            Entiendo el diseño desde un punto de vista sensible y táctil, conectando el lenguaje gráfico con la materia física y los códigos estéticos contemporáneos. Mi objetivo es sumar rigor técnico, iniciativa y una cuidada sensibilidad visual a proyectos en un entorno profesional.
+          </p>
+          <span class="lang-badge">EN</span>
+          <p class="lang-en">
+            I understand design from a sensitive and tactile perspective, bridging graphic language with physical materials and contemporary visual codes. My objective is to contribute technical precision, initiative, and an eye for detail to projects within a professional creative team.
+          </p>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+</body>
+</html>
