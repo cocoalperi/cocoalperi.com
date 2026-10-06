@@ -150,15 +150,6 @@ button {
    HOME / VIDEO
    ========================================================= */
 
-.video-portada {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  box-sizing: border-box;
-  margin-bottom: 2rem;
-}
-
 .page-home {
   min-height: 100svh;
   min-height: 100dvh;
@@ -191,59 +182,25 @@ button {
 @media (max-width: 650px) {
   .page-home {
     width: 100%;
-    min-height: 0;
-    height: auto;
+    min-height: 80svh;
     padding: 0;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .hero-video {
     width: 100%;
-    height: auto;
-    min-height: 0;
+    height: 80svh;
     overflow: hidden;
   }
 
   .video-portada {
-    position: relative;
     width: 100%;
-    height: auto;
-    min-height: 0;
+    height: 100%;
     display: block;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center center;
-  }
-}
-
-/* =========================================================
-   MOBILE VERTICAL
-   ========================================================= */
-
-@media (max-width: 650px) and (orientation: portrait) {
-  .hero-video {
-    width: 100vw;
-    height: auto;
-  }
-
-  .video-portada {
-    width: 100%;
-    height: auto;
-  }
-}
-
-/* =========================================================
-   MOBILE HORIZONTAL
-   ========================================================= */
-
-@media (max-width: 900px) and (orientation: landscape) {
-  .hero-video {
-    width: 100vw;
-    height: auto;
-  }
-
-  .video-portada {
-    width: 100%;
-    height: auto;
   }
 }
 
