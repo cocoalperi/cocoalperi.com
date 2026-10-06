@@ -1,257 +1,151 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>COCO ALPERI — About</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="COCO ALPERI — Portfolio">
+  <title>COCO ALPERI — Portfolio</title>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    body {
-      padding: 0;
-      margin: 0;
-    }
-
-    .about-page {
-      padding: 170px var(--pad) 80px;
-      width: 100%;
-    }
-
-    .section-title {
-      color: #0055ff;
-      font-size: 13px;
-      font-weight: 600;
-      margin-bottom: 24px;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-
-    .lang-badge {
-      display: inline-block;
-      font-size: 10px;
-      font-weight: 700;
-      color: #888888;
-      letter-spacing: 0.05em;
-      margin-bottom: 4px;
-      text-transform: uppercase;
-    }
-
-    /* Cuadrícula en PC: 360px a la izquierda y el resto a la derecha */
-    .top-grid {
-      display: grid;
-      grid-template-columns: 360px 1fr;
-      gap: clamp(40px, 6vw, 90px);
-      margin-bottom: 80px;
-      align-items: start;
-    }
-
-    /* Control de ancho para que el texto de Profile no quede excesivamente estirado */
-    .profile-right-col {
-      max-width: 620px;
-    }
-
-    .about-block {
-      margin-bottom: 24px;
-    }
-    .about-block:last-child {
-      margin-bottom: 0;
-    }
-
-    .lang-es {
-      color: #111111;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 1.55;
-      margin-bottom: 10px;
-    }
-
-    .lang-en {
-      color: #666666;
-      font-weight: 400;
-      font-size: 13px;
-      line-height: 1.55;
-      font-style: italic;
-    }
-
-    /* Foto de presentación más proporcionada */
-    .profile-photo {
-      width: 100%;
-      max-width: 320px;
-      aspect-ratio: 4 / 5;
-      overflow: hidden;
-      margin-bottom: 24px;
-      background-color: var(--line, #e5e5e5);
-    }
-
-    .profile-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: opacity 0.25s ease;
-    }
-
-    .profile-photo img:hover {
-      opacity: 0.9;
-    }
-
-    .member-group {
-      margin-bottom: 20px;
-    }
-    .member-group:last-child {
-      margin-bottom: 0;
-    }
-    .member-name {
-      font-weight: 500;
-      color: #777777;
-      font-size: 13px;
-      display: block;
-      margin-bottom: 2px;
-    }
-    .member-role {
-      font-weight: 500;
-      color: #111111;
-      font-size: 13.5px;
-      display: block;
-    }
-    .member-role-en {
-      font-weight: 400;
-      color: #666666;
-      font-size: 12.5px;
-      font-style: italic;
-      display: block;
-    }
-
-    /* Móvil: permanece intacto en 1 sola columna */
-    @media (max-width: 768px) {
-      .about-page {
-        padding-top: 85px;
-        padding-bottom: 48px;
-      }
-      .section-title {
-        margin-bottom: 16px;
-      }
-      .profile-photo {
-        max-width: 190px;
-        margin-bottom: 20px;
-      }
-      .top-grid {
-        grid-template-columns: 1fr;
-        gap: 36px;
-        margin-bottom: 48px;
-      }
-      .profile-right-col {
-        max-width: 100%;
-      }
-    }
-  </style>
 </head>
+
 <body>
 
-  <!-- Header -->
+  <!-- Intro / logo animation -->
+  <div class="intro" id="intro" aria-label="COCO ALPERI">
+    <div class="intro-logo">COCO ALPERI</div>
+  </div>
+
   <header class="site-header">
-    <a class="logo" href="index.html#home" aria-label="COCO ALPERI home">
+    <a class="logo" href="#home" aria-label="COCO ALPERI home">
       COCO ALPERI
     </a>
 
     <nav class="main-nav" aria-label="Main navigation">
-      <a href="index.html#home">Home</a>
-      <a href="index.html#work">Work</a>
-      <a href="about.html" class="active">About</a>
+      <a href="#home">Home</a>
+      <a href="#work">Work</a>
+      <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <div class="about-page">
-    
-    <main class="top-grid">
+  <main>
 
-      <!-- ======================================================== -->
-      <!-- 1. COLUMNA IZQUIERDA: ABOUT (Foto y datos personales)    -->
-      <!-- ======================================================== -->
-      <section class="about-left-col">
-        <h2 class="section-title">About</h2>
+    <!-- HOME -->
+    <section id="home" class="page page-home">
+      <div class="hero-video">
+        <video 
+          autoplay 
+          muted 
+          loop 
+          playsinline 
+          controls 
+          preload="auto" 
+          class="video-portada"
+        >
+          <source src="assets/Comp-1.mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
 
-        <div class="profile-photo">
-          <img src="assets/fotoAbout.jpg" alt="Covadonga Alperi">
+    <!-- WORK -->
+    <section id="work" class="page page-work">
+
+      <div class="section-heading">
+        <h1>Work</h1>
+
+        <!-- Filtros con data-filter normalizados -->
+        <div class="filters" aria-label="Filter projects">
+          <button class="filter active" data-filter="all">
+            All
+          </button>
+          <button class="filter" data-filter="Editorial">
+            Editorial
+          </button>
+          <button class="filter" data-filter="Packaging">
+            Packaging
+          </button>
+          <button class="filter" data-filter="Photo editorial">
+            Photo editorial
+          </button>
+          <button class="filter" data-filter="Fashion editorial">
+            Fashion editorial
+          </button>
+          <button class="filter" data-filter="Corporate Identity">
+            Corporate identity
+          </button>
         </div>
+      </div>
 
-        <div class="member-group">
-          <span class="member-name">Covadonga Alperi</span>
-          <span class="member-role">Diseñadora Gráfica & Directora de Arte</span>
-          <span class="member-role-en">Graphic Designer & Art Director</span>
-        </div>
+      <div class="project-list">
 
-        <div class="member-group">
-          <span class="member-name">Témpora Jewelry</span>
-          <span class="member-role">Fundadora & Dirección de Marca</span>
-          <span class="member-role-en">Founder & Brand Director</span>
-        </div>
+        <!-- Proyecto 1: Editorial -->
+        <article class="project" data-category="Editorial" id="project-editorial">
+          <a href="projects/project-one.html" class="project-image">
+            <img src="../assets/portadaCertamen.png" alt="Guardas libro">
+          </a>
+          <div class="project-info">
+            <h2>XIV Certamen de Cuentos y Dibujos sobre Medio Ambiente. Gijón 2025</h2>
+            <span>2024</span>
+            <span>Editorial</span>
+          </div>
+        </article>
 
-        <div class="member-group">
-          <span class="member-name">Educación / Education</span>
-          <span class="member-role">Grado en Diseño Gráfico (ESAPA)</span>
-          <span class="member-role-en">CFGS Gráfica Impresa (Escuela de Arte de Oviedo)</span>
-        </div>
+        <!-- Proyecto 2: Packaging -->
+        <article class="project" data-category="Packaging" id="project-packaging">
+          <a href="projects/project-two.html" class="project-image">
+            <img src="../assets/portada1.png" alt="Vinitor">
+          </a>
+          <div class="project-info">
+            <h2>Vinitor</h2>
+            <span>2025</span>
+            <span>Packaging</span>
+          </div>
+        </article>
 
-        <div class="member-group">
-          <span class="member-name">Disponibilidad / Status</span>
-          <span class="member-role">Disponible para prácticas en estudio o agencia</span>
-          <span class="member-role-en">Available for design & fashion internships</span>
-        </div>
-      </section>
+        <!-- Proyecto 3: Photo editorial -->
+        <article class="project" data-category="Photo editorial" id="project-photo-editorial">
+          <a href="projects/project-three.html" class="project-image">
+            <img src="../assets/portada3.png" alt="Portada Dazed">
+          </a>
+          <div class="project-info">
+            <h2>Editorial fotográfica: Dazed</h2>
+            <span>2024</span>
+            <span>Photo editorial</span>
+          </div>
+        </article>
 
-      <!-- ======================================================== -->
-      <!-- 2. COLUMNA DERECHA: PROFILE (Textos explicativos)        -->
-      <!-- ======================================================== -->
-      <section class="profile-right-col">
-        <h2 class="section-title">Profile</h2>
+        <!-- Proyecto 4: Fashion editorial -->
+        <article class="project" data-category="Fashion editorial" id="project-fashion-editorial">
+          <a href="projects/project-four.html" class="project-image">
+            <img src="../assets/fotoBannerClodettes.png" alt="Portada Clodettes">
+          </a>
+          <div class="project-info">
+            <h2>Editorial de moda - Les Clodettes</h2>
+            <span>2026</span>
+            <span>Fashion editorial</span>
+          </div>
+        </article>
 
-        <div class="about-block">
-          <span class="lang-badge">ES</span>
-          <p class="lang-es">
-            Soy Covadonga Alperi, diseñadora gráfica y creativa visual afincada en Asturias, aunque actualmente residiendo en Madrid. Estoy graduada en Gráfica Impresa en la Escuela de Arte de Oviedo y finalizando el grado en Diseño Gráfico en la ESAPA, Escuela Superior de Arte del Principado de Asturias. Enfoco mi trabajo en la comunicación en moda, la identidad de marca, el packaging y la dirección de arte.
-          </p>
-          <span class="lang-badge">EN</span>
-          <p class="lang-en">
-            My name is Covadonga Alperi, and I am a graphic designer and visual artist based in Asturias, although I currently live in Madrid. I have a degree in Print Graphics from the Oviedo School of Art and am completing my bachelor’s degree in Graphic Design at ESAPA, the Higher School of Art of the Principality of Asturias. My work focuses on fashion communication, brand identity, packaging, and art direction.
-          </p>
-        </div>
+      </div>
 
-        <div class="about-block">
-          <span class="lang-badge">ES</span>
-          <p class="lang-es">
-            De forma paralela a mi labor de diseño independiente, soy fundadora y directora creativa de Témpora (<a href="https://www.hellotempora.com" target="_blank" rel="noopener" style="text-decoration: underline;">hellotempora.com</a>), una marca propia de joyería y bisutería artesanal en resina y demás materiales inspirada en los ciclos estacionales. Desarrollar este proyecto me ha permitido gestionar de forma integral el concepto, la dirección estética de producto, el packaging y la comunicación visual.
-          </p>
-          <span class="lang-badge">EN</span>
-          <p class="lang-en">
-            Alongside my independent design work, I am the founder and creative director of Témpora (<a href="https://www.hellotempora.com" target="_blank" rel="noopener" style="text-decoration: underline;">hellotempora.com</a>), a self-initiated handcrafted resin and other materials jewelry brand inspired by the seasons. Running this project has allowed me to oversee every stage, from core concept and product art direction to packaging and visual communication.
-          </p>
-        </div>
+    </section>
 
-        <div class="about-block">
-          <span class="lang-badge">ES</span>
-          <p class="lang-es">
-            Entiendo el diseño desde un punto de vista sensible y táctil, conectando el lenguaje gráfico con la materia física y los códigos estéticos contemporáneos. Mi objetivo es sumar rigor técnico, iniciativa y una cuidada sensibilidad visual a proyectos en un entorno profesional.
-          </p>
-          <span class="lang-badge">EN</span>
-          <p class="lang-en">
-            I understand design from a sensitive and tactile perspective, bridging graphic language with physical materials and contemporary visual codes. My objective is to contribute technical precision, initiative, and an eye for detail to projects within a professional creative team.
-          </p>
-        </div>
-      </section>
+  </main>
 
-    </main>
-
-  </div>
-
-</body>
-</html>
-  </div>
+  <script src="script.js"></script>
 
 </body>
 </html>
