@@ -18,7 +18,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 
 <body>
@@ -95,7 +95,7 @@
         <!-- Proyecto 1: Editorial -->
         <article class="project" data-category="Editorial" id="project-editorial">
           <a href="projects/project-one.html" class="project-image">
-            <img src="../assets/portadaCertamen.png" alt="Guardas libro">
+            <img src="assets/portadaCertamen.png" alt="Guardas libro">
           </a>
           <div class="project-info">
             <h2>XIV Certamen de Cuentos y Dibujos sobre Medio Ambiente. Gijón 2025</h2>
@@ -107,7 +107,7 @@
         <!-- Proyecto 2: Packaging -->
         <article class="project" data-category="Packaging" id="project-packaging">
           <a href="projects/project-two.html" class="project-image">
-            <img src="../assets/portada1.png" alt="Vinitor">
+            <img src="assets/portada1.png" alt="Vinitor">
           </a>
           <div class="project-info">
             <h2>Vinitor</h2>
@@ -116,27 +116,27 @@
           </div>
         </article>
 
-        <!-- Proyecto 3: Dazed -->
-        <article class="project" data-category="Fashion editorial" id="project-dazed">
+        <!-- Proyecto 3: Dazed (Photo editorial) -->
+        <article class="project" data-category="Photo editorial" id="project-dazed">
           <a href="projects/project-three.html" class="project-image">
-            <img src="../assets/portadaDazed.png" alt="Dazed">
+            <img src="assets/portada3.png" alt="Dazed">
           </a>
           <div class="project-info">
             <h2>Dazed</h2>
             <span>2024</span>
-            <span>Fashion editorial</span>
+            <span>Photo editorial</span>
           </div>
         </article>
 
-        <!-- Proyecto 4: Les Clodettes -->
-        <article class="project" data-category="Corporate Identity" id="project-clodettes">
+        <!-- Proyecto 4: Les Clodettes (Fashion editorial) -->
+        <article class="project" data-category="Fashion editorial" id="project-clodettes">
           <a href="projects/project-four.html" class="project-image">
-            <img src="../assets/portadaClodettes.png" alt="Les Clodettes">
+            <img src="assets/fotoBannerClodettes1.png" alt="Les Clodettes">
           </a>
           <div class="project-info">
             <h2>Les Clodettes</h2>
             <span>2024</span>
-            <span>Corporate identity</span>
+            <span>Fashion editorial</span>
           </div>
         </article>
 
@@ -160,7 +160,7 @@
       };
 
       playVideo();
-      // Si el móvil estaba en reposo o modo ahorro, arranca al primer toque en la pantalla
+      // Si el móvil está en reposo o modo bajo consumo, arranca al primer toque en la pantalla
       window.addEventListener('touchstart', playVideo, { once: true });
 
       // Permite pausar/reanudar tocando el vídeo
