@@ -40,13 +40,18 @@
       text-transform: uppercase;
     }
 
-    /* Columna izquierda (About con foto) 280px, Columna derecha (Profile con textos) el resto */
+    /* Cuadrícula en PC: 360px a la izquierda y el resto a la derecha */
     .top-grid {
       display: grid;
-      grid-template-columns: 280px 1fr;
-      gap: clamp(32px, 5vw, 64px);
+      grid-template-columns: 360px 1fr;
+      gap: clamp(40px, 6vw, 90px);
       margin-bottom: 80px;
       align-items: start;
+    }
+
+    /* Control de ancho para que el texto de Profile no quede excesivamente estirado */
+    .profile-right-col {
+      max-width: 620px;
     }
 
     .about-block {
@@ -72,10 +77,10 @@
       font-style: italic;
     }
 
-    /* Foto de presentación */
+    /* Foto de presentación más proporcionada */
     .profile-photo {
       width: 100%;
-      max-width: 240px;
+      max-width: 320px;
       aspect-ratio: 4 / 5;
       overflow: hidden;
       margin-bottom: 24px;
@@ -121,7 +126,7 @@
       display: block;
     }
 
-    /* En móvil se apilan en 1 sola columna: primero About (foto) y luego Profile */
+    /* Móvil: permanece intacto en 1 sola columna */
     @media (max-width: 768px) {
       .about-page {
         padding-top: 85px;
@@ -138,6 +143,9 @@
         grid-template-columns: 1fr;
         gap: 36px;
         margin-bottom: 48px;
+      }
+      .profile-right-col {
+        max-width: 100%;
       }
     }
   </style>
@@ -239,6 +247,10 @@
 
     </main>
 
+  </div>
+
+</body>
+</html>
   </div>
 
 </body>
