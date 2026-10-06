@@ -18,7 +18,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=5">
 </head>
 
 <body>
@@ -53,6 +53,7 @@
           loop 
           playsinline 
           webkit-playsinline
+          controls
           preload="auto" 
           class="video-portada"
         >
@@ -146,34 +147,30 @@
   </main>
 
   <script>
-    // 1. Control de Autoplay y Pausa al pulsar el vídeo
     const v = document.getElementById('mainHeroVideo');
+
     if (v) {
+      // 1. Iniciar inmediatamente en mute para superar el bloqueo obligatorio de Safari/Chrome
       v.muted = true;
       v.defaultMuted = true;
+      const playPromise = v.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {});
+      }
 
-      const playVideo = () => {
-        const promise = v.play();
-        if (promise !== undefined) {
-          promise.catch(() => {});
-        }
+      // 2. Activar el audio automáticamente en cuanto el usuario toca la pantalla o hace clic
+      const unmuteOnInteraction = () => {
+        v.muted = false;
+        v.volume = 1.0;
+        window.removeEventListener('click', unmuteOnInteraction);
+        window.removeEventListener('touchstart', unmuteOnInteraction);
       };
 
-      playVideo();
-      // Si el móvil está en reposo o modo bajo consumo, arranca al primer toque en la pantalla
-      window.addEventListener('touchstart', playVideo, { once: true });
-
-      // Permite pausar/reanudar tocando el vídeo
-      v.addEventListener('click', () => {
-        if (v.paused) {
-          v.play();
-        } else {
-          v.pause();
-        }
-      });
+      window.addEventListener('click', unmuteOnInteraction, { once: true });
+      window.addEventListener('touchstart', unmuteOnInteraction, { once: true });
     }
 
-    // 2. Funcionalidad de Filtros de Proyectos
+    // 3. Filtros de proyectos
     const filterButtons = document.querySelectorAll('.filters .filter');
     const projects = document.querySelectorAll('.project-list .project');
 
